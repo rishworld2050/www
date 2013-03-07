@@ -1,0 +1,37 @@
+        <div class="basketItem" id="bsk-{cart_slot_id}">
+          
+          <div class="basketLeft">
+            
+            <span class="preview">
+              <a href="{image_big_url}" onclick="$(this).colorbox({iframe:true,title: function() {return '&lt;a class=\'colorbox_details\' href=\'{url}\' title=\'{view_product}\'>{view_product}&lt;/a&gt;'}})"><img src="{image}" alt="{item}" title="{item}" /></a>
+            </span>
+          
+          </div>
+          
+          <div class="basketRight">
+            <span class="item">
+              <span class="qty" id="qtyarea-{cart_slot_id}">{qty}</span> &gt; <a href="{url}" title="{item}">{item}</a>
+              {additional_text}
+              {attributes}
+            </span>
+            
+            <span class="update">
+              <input type="hidden" name="box-{cart_slot_id}" id="box-{cart_slot_id}" value="{qty}" /> <input onclick="updateQTY('{cart_slot_id}','add',{max},'{text}','{text2}','{ship_tax_off}');return false" class="uimage" type="image" src="templates/images/qty-add.png" title="+" /> <input onclick="updateQTY('{cart_slot_id}','reduce',{max},'{text}','{text2}','{ship_tax_off}');return false" class="uimage2" type="image" src="templates/images/qty-minus.png" title="-" />
+            </span>
+          
+            <span class="price" id="pb-{cart_slot_id}">
+              {price}
+              <del class="prevprice" id="pbv-{cart_slot_id}">{price_old}</del>
+            </span>
+            
+            {personalisation_details}
+            
+            <span class="remove">
+             <a href="#" onclick="deleteBasketItem('{cart_slot_id}','{text}','link','{ship_tax_off}');return false" title="{delete}">{delete}</a>
+            </span>
+          
+          </div>
+          
+          <br class="clear" />
+          
+        </div>

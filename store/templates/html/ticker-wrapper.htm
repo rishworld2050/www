@@ -1,0 +1,24 @@
+  <div id="tickerMainWrapper">
+   <script type="text/javascript">
+   //<![CDATA[
+   $(function () {
+     $('#js-news').ticker({titleText: '{text}'});
+     $('#release-wrapper').css('margin-top', '-' + ($('#release-wrapper').height() + 20) + 'px');
+     $('a[href="#release-history"]').toggle(function () {	
+		   $('#release-wrapper').animate({
+			   marginTop: '0px'
+		   }, 600, 'linear');
+	   }, function () {
+		   $('#release-wrapper').animate({
+			   marginTop: '-' + ($('#release-wrapper').height() + 20) + 'px'
+		   }, 600, 'linear');
+	   });
+   });  	
+   //]]>
+   </script>
+   <div id="ticker-wrapper" class="no-js">
+		<ul id="js-news" class="js-hidden">
+			{news}
+		</ul>
+	 </div>
+  </div>

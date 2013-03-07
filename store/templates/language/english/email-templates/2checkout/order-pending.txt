@@ -1,0 +1,19 @@
+Hello {NAME},
+
+Thank you for placing an order at {WEBSITE_NAME}. 
+
+Your order is currently waiting review by the 2Checkout fraud team. This process can take up to 6hrs depending on your timezone, so please be patient.
+
+Once your payment has been accepted and processed, another e-mail will follow.
+
+If you need to contact us about your order, reply to this e-mail.
+
+Thank you for your order,
+
+Kind regards,
+
+------------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+Your IP address(es) logged as: {ORDER_IP}

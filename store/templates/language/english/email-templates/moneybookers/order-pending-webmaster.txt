@@ -1,0 +1,22 @@
+Hello,
+
+An order has been processed in your cart, but its payment status is 'Pending'.
+
+Unfortunately, Moneybookers doesn`t pass back the reason for marking this payment as pending.
+
+The buyer has been informed of this status.
+
+To review the details of this transaction, log in to your Moneybookers account:
+http://www.moneybookers.com
+
+Once the payment is successfully processed further e-mails will follow.
+
+This order will appear in your admin area when completed.
+
+Kind regards,
+
+------------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+Visitors IP Address(es): {ORDER_IP}

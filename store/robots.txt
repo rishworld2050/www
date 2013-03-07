@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /classes/
+Disallow: /control/
+Disallow: /admin/
+Disallow: /docs/
+Disallow: /install/
+Disallow: /product-downloads/
+Disallow: /logs/
+Disallow: /templates/

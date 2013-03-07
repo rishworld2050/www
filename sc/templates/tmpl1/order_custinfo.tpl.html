@@ -1,0 +1,83 @@
+{* customer information form *}
+
+<center>
+
+<h3><u>{$smarty.const.CART_PROCEED_TO_CHECKOUT}</u></h3>
+
+<p>
+<table width=70% border=0>
+
+<tr><td align=center>
+
+<form action="index.php" name=custinfo_form method=post onSubmit="return validate_custinfo(this);">
+
+<table border=0>
+
+<tr>
+<td colspan="3" align="center">
+<div width="100%" class="menu" style="background: #{$smarty.const.CONF_MIDDLE_COLOR}; padding: 5px;" align="center">{$smarty.const.STRING_CONTACT_INFORMATION}</div>
+</td>
+</tr>
+
+<tr>
+<td colspan=3 align=center>
+ {$smarty.const.STRING_REQUIRED}
+</td>
+</tr>
+
+<tr>
+<td colspan=2 align=right><font color=red>*</font> {$smarty.const.CUSTOMER_FIRST_NAME}</td>
+<td><input type="text" name="first_name" value="{$reg_userinfo[7]|replace:'"':'&quot;'}"></td>
+</tr>
+<tr>
+<td colspan=2 align=right><font color=red>*</font> {$smarty.const.CUSTOMER_LAST_NAME}</td>
+<td><input type="text" name="last_name" value="{$reg_userinfo[11]|replace:'"':'&quot;'}"></td>
+</tr>
+<tr>
+<td colspan=2 align=right><font color=red>*</font> {$smarty.const.CUSTOMER_EMAIL}</td>
+<td><input type="text" name="email" value="{$reg_userinfo[2]|replace:'"':'&quot;'}"></td>
+</tr>
+<tr>
+<td colspan=2 align=right>{$smarty.const.CUSTOMER_PHONE_NUMBER}</td>
+<td><input type="text" name="phone" value="{$reg_userinfo[6]|replace:'"':'&quot;'}"></td>
+</tr>
+<tr>
+<td colspan=3>&nbsp;</td>
+</tr>
+<tr>
+<td colspan=2 align=right>{$smarty.const.CUSTOMER_ADDRESS}</td>
+<td><textarea name="address" rows=4>{$reg_userinfo[5]|replace:'<':'&lt;'}</textarea></td>
+</tr>
+<tr>
+<td colspan=2 align=right><font color=red>*</font> {$smarty.const.CUSTOMER_CITY}</td>
+<td><input type="text" name="city" value="{$reg_userinfo[4]|replace:'"':'&quot;'}"></td>
+</tr>
+<tr>
+<td colspan=2 align=right><font color=red>*</font> {$smarty.const.CUSTOMER_STATE}</td>
+<td><input type="text" name="state" value="{$reg_userinfo[10]|replace:'"':'&quot;'}"></td>
+</tr>
+<tr>
+<td colspan=2 align=right><font color=red>*</font> {$smarty.const.CUSTOMER_ZIP}</td>
+<td><input type="text" name="zip" value="{$reg_userinfo[9]|replace:'"':'&quot;'}"></td>
+</tr>
+<tr>
+<td colspan=2 align=right><font color=red>*</font> {$smarty.const.CUSTOMER_COUNTRY}</td>
+<td><input type="text" name="country" value="{$reg_userinfo[3]|replace:'"':'&quot;'}"></td>
+</tr>
+
+</table>
+
+<p>
+<input type="submit" value="{$smarty.const.STRING_PLACE_ORDER}" style="font-weight: bold; font-size: 120%;">
+
+<input type=hidden name=complete_order value=1>
+</p>
+
+</form>
+
+</td>
+
+</tr>
+</table>
+
+</center>

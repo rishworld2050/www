@@ -1,0 +1,39 @@
+{* aux pages *}
+
+<p>
+{if $configuration_saved eq 1}
+	{$smarty.const.ADMIN_UPDATE_SUCCESSFUL}
+{/if}
+
+
+<form action=admin.php method=post>
+
+<table border=0 cellpadding=15 cellspacing=0>
+
+<tr class="mainmenu_selected_{$current_dpt}">
+<td align=center>{$smarty.const.ADMIN_ABOUT_PAGE}</td>
+<td bgcolor="white">&nbsp;</td>
+<td align=center>{$smarty.const.ADMIN_SHIPPING_PAGE}</td>
+</tr>
+
+<tr>
+ <td bgcolor=#F0EFFF>
+	<textarea name=about_page rows=30 cols=50>{$about_page|replace:"<":"&lt;"}</textarea>
+ </td>
+ <td bgcolor="white">
+	&nbsp;
+ </td>
+ <td bgcolor=#F0EFFF>
+	<textarea name=shipping_page rows=30 cols=50>{$shipping_page|replace:"<":"&lt;"}</textarea>
+ </td>
+</tr>
+
+</table>
+
+<p>
+<input type=hidden name=dpt value=conf>
+<input type=hidden name=sub value=aux>
+<input type=hidden name=save_aux value=1>
+<input type=submit value="{$smarty.const.SAVE_BUTTON}">
+
+</form>

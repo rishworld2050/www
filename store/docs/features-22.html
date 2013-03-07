@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>ISBN API: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>What is ISBNDB?</p>
+</div>
+
+<div class="blockWrapper">
+  <p>ISBNdb.com project is a database of books providing on-line and remote research tools for individuals, book stores, librarians, scientists, etc. Taking data from hundreds of libraries across the world, ISBNdb is a unique tool you won't find anywhere else. At the time of writing this, the ISBNDB database contained over 6,000,000 books.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>ISBNDB API</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The ISBNDB allows free remote access to its database via its <a href="https://isbndb.com/data-intro.html" onclick="window.open(this);return false">API</a>. At the time of writing this, the service is restricted to 500 lookups per day. Further lookups can be <a href="https://isbndb.com/account/dev/tr-buy.html" onclick="window.open(this);return false">purchased</a> at reasonable rates. For example, &#036;10.00 would give you 4,000 additional lookups.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Activate in Maian Cart</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The procedure for enabling this feature in Maian Cart is a simple one. Please follow these instructions:<br /><br />
+  1. Sign up for a free account at <a href="https://isbndb.com/account/create.html" onclick="window.open(this);return false">ISBNDB.com</a>.<br /><br />
+  2. Log into your account and access the 'Developer Area'.<br /><br />
+  3. Click 'Manage Access Keys'.<br /><br />
+  <img class="gateimg" src="images/cart/56.jpg" alt="" title="" /><br /><br />
+  4. Click 'Generate a new key'.<br /><br />
+  <img class="gateimg" src="images/cart/57.jpg" alt="" title="" /><br /><br />
+  5. Enter comment for key reference. Can be anything. Leave 'Daily Use Limit' blank or enter 0. Then click 'Generate new key':<br /><br />
+  <img class="gateimg" src="images/cart/58.jpg" alt="" title="" /><br /><br />
+  6. Your new key is created. From the left menu click 'Manage Keys'.<br /><br />
+  <img class="gateimg" src="images/cart/59.jpg" alt="" title="" /><br /><br />
+  7. View your new key and copy the key number (highlight and ctrl-c):<br /><br />
+  <img class="gateimg" src="images/cart/60.jpg" alt="" title="" /><br /><br />
+  8. Access your Maian Cart admin area and on the settings page, paste (ctrl-v) the key into the ISBNDB access API key box:<br /><br />
+  <img class="gateimg" src="images/cart/61.jpg" alt="" title="" /><br /><br />
+  Thats it, you are done.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Maian Cart Usage</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Once the key is enabled you`ll see a 'ISBN Lookup' link next to the product name box on the 'Catalogue > Add Product' page.<br /><br />
+  <img class="gateimg" src="images/cart/62.jpg" alt="" title="" /><br /><br />
+  Enter ISBN number in product name box and click link to perform lookup. If available, book title/name and summary (description) will be auto filled in. In some cases, not all data 
+  is returned. For many books there is no summary and believe or not no author name. Its trial and error. If the data returned seems broke this is a restriction of the ISBNDB service and NOT
+  a fault in Maian Cart.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Change Title/Author Position</p>
+</div>
+
+<div class="blockWrapper">
+  <p>By default the returned product name/title will be: {title} - {author}. If you wish to change this edit the following language file:
+  <span class="infoBlock">
+    <span class="li">
+     <span class="highlight">admin/templates/language/english/system/settings.php</span>
+    </span>
+  </span>
+  Edit the following:
+  <span class="infoBlock">
+    <span class="li">
+     <span class="highlight">&#036;msg_settings220  = '{book} - {author}';</span>
+    </span>
+  </span>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>PHP4 Restrictions</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Finally, because PHP4 doesn`t have the simple xml functions available, the system will require the 'allow_url_fopen' is on. The script will attempt to activate it for the lookup operation
+  only, but if its unsuccessful you may see the following error:
+  <span class="infoBlock">
+    <span class="li">
+     <span class="highlight">&quot;This feature is unavailable on your server, sorry.&quot;</span>
+    </span>
+  </span>
+  If this occurs you need to either enable the 'allow_url_fopen' directive in your PHP.ini file or use the script on a server that supports PHP5.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

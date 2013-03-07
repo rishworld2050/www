@@ -1,0 +1,9 @@
+Hello,
+
+This is to confirm that your email address has been added to our newsletter, thank you.
+
+Kind regards,
+
+----------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}

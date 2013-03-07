@@ -1,0 +1,48 @@
+{WEBSITE_NAME} - Order #{INVOICE_NO}
+-------------------------------------------------------------
+
+An order has been placed and processed on your website:
+
+BUYER:
+----------------------------------------------------------------
+{NAME}
+{ADDRESS}
+{EMAIL}
+
+ITEMS ORDERED:
+----------------------------------------------------------------
+
+{PRODUCT_ORDER}
+
+----------------------------------------------------------------
+Sub Total: {SUB_TOTAL}
+Shipping: {SHIP}
+Tax: {TAX}
+Insurance: {INSURANCE}
+Order Total: {TOTAL}
+
+Shipping Country: {SHIP_COUNTRY}
+Shipping Zone/Area: {SHIP_ZONE_AREA}
+Shipping Method: {SHIP_METHOD}
+
+Payment Currency: {CURRENCY}
+Payment method: {METHOD}
+Download Only Order: {DOWNLOAD_ONLY}
+----------------------------------------------------------------
+
+Payment was processed via 2Checkout and this order has now been completed.
+
+2Checkout Invoice ID: {INVOICE_ID}
+http://www.2checkout.com
+
+Buyer download URL if applicable:
+{DOWNLOAD_URL}
+
+To view this order, log into your administration area:
+{WEBSITE_URL}/{ADMIN_FOLDER}/?loadOrder={ORDER_ID}
+
+----------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+Visitors IP Address(es): {ORDER_IP}

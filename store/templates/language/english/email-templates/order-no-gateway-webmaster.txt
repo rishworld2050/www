@@ -1,0 +1,43 @@
+{WEBSITE_NAME} - Order #{INVOICE_NO}
+---------------------------------------------
+
+An order has been placed and processed on your website:
+
+BUYER:
+----------------------------------------------------------------
+{NAME}
+{ADDRESS}
+{PHONE}
+{EMAIL}
+
+ITEMS ORDERED:
+----------------------------------------------------------------
+
+{PRODUCT_ORDER}
+
+----------------------------------------------------------------
+Sub Total: {SUB_TOTAL}
+Shipping: {SHIP}
+Tax: {TAX}
+Insurance: {INSURANCE}
+Order Total: {TOTAL}
+
+Shipping Country: {SHIP_COUNTRY}
+Shipping Zone/Area: {SHIP_ZONE_AREA}
+Shipping Method: {SHIP_METHOD}
+
+Payment Currency: {CURRENCY}
+Payment method: {METHOD}
+Download Only Order: {DOWNLOAD_ONLY}
+----------------------------------------------------------------
+
+This order is pending until payment has been received and the download page is not accessible (if applicable) until the order status has been updated. 
+
+To change the status of this order or to view this order, log into your administration area.
+{WEBSITE_URL}/{ADMIN_FOLDER}/?loadOrder={ORDER_ID}
+
+----------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+Visitors IP address(es): {ORDER_IP}

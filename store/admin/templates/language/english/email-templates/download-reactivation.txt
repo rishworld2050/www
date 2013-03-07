@@ -1,0 +1,21 @@
+Hi {NAME},
+
+You are receiving this e-mail because you have requested some product downloads be reset from a recent order at "{WEBSITE_NAME}".
+
+Downloads have now been re-activated for the following products:
+-------------------------------------------------------------------
+
+{PRODUCTS}
+
+-------------------------------------------------------------------
+
+To download these products, please click the following url:
+{D_URL}
+
+-------------------------------------------------------------------
+
+Kind regards,
+
+------------------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}

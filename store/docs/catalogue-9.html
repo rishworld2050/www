@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>Discount Coupons: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>Overview</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enables you to add discount coupons to the system. This enables visitors to get discounts on products. Can be a useful marketing option.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Campaign Name</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is the name of your new campaign to group coupons into. Can be anything.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Usage Amount</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enter usage amount if coupon can only be used a set amount of times. 0 = unlimited.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Expiry Date</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enter expiry date if coupon is to expire on a certain date. Leave blank for no expiry. If usage amount and expiry is set, coupon expires when either reaches their limit first.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Min Spend Amount</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is the amount a customer must spend before they can apply a coupon code from this campaign.<br /><br /><b>NOTE: This does not apply if the Free Shipping or No Tax discounts are utilised</b>.<br /><br />Discount applies to total only, not shipping rate. Example:<br /><br /><b>9.99</b><br /><br />Set to 0 for no minimum amount. It is recommended you set a minimum spend amount.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Discount Code</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Code number for coupon. This is the code a visitor enters on the checkout page to get discount. Alphanumeric ONLY is recommended.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Discount</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This can be any of the following:<br /><br /><b>2.99</b> - (Fixed amount discount off cost of goods)<br /><b>5%</b> - (Percentage discount off cost of goods)<br />
+  <b>freeshipping</b> - (Offers Free Shipping ONLY on ALL orders - Min spend amount not applicable)<br />
+  <b>notax</b> - (Offers No Tax Payment ONLY on ALL orders - Min spend amount not applicable)<br /><br />
+  Fixed &amp; percentage discounts apply to sub total only, not shipping or tax. If free shipping is already in place, free shipping coupons are ignored. If no tax cost is already
+  in place, free tax coupons are ignored. <br /><br />
+  A value must be entered in this field.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Free Shipping with Min Threshold</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you need an option to allow free shipping if a min spend amount is reached, look at 'General Settings' > 'Global Payment Settings' > 'Free Shipping Threshold'</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable / Disable Coupons</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Easily disables or enables a campaign without the need to delete it.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Coupon Report</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Click the graph icon after adding coupons to see an overview of coupon usage for that campaign.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

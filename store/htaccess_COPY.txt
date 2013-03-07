@@ -1,0 +1,79 @@
+#===================================#
+# MAIAN CART HTACCESS FILE          #
+# http://www.maiancart.com          #
+#===================================#
+
+#===================================#
+# PREVENT VIEWING OF .HTACCESS FILE #
+#===================================#
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+#============================#
+# PREVENT DIRECTORY BROWSING #
+#============================#
+
+IndexIgnore */*
+
+#=========================#
+# SET THE DEFAULT HANDLER #
+#=========================#
+
+DirectoryIndex index.php index.html
+
+#=========================================================================================================#
+# MAIAN CART REWRITE RULES                                                                                #
+# If your server displays a 404 and supports htaccess, you might need to uncomment the rewriteBase line   #
+#=========================================================================================================#
+
+# RewriteBase /
+RewriteRule ^(contact-us|about-us|shipping-and-returns|terms-and-conditions|advanced-search|no-gateway|moneybookers).html$ index.php?p=$1
+RewriteRule ^(checkout|clear-basket|process|sitemap).html$ index.php?p=$1
+RewriteRule ^(code-error|dl-code-error|dl-expired|zip-error|zip-limit|dl-lock|out-of-stock|opt-out).html$ index.php?p=$1
+RewriteRule ^(pp-thanks|pp-cancel|pp-pending).html$ checkout-paypal.php?p=$1
+RewriteRule ^(ap-thanks|ap-cancel|ap-pending).html$ checkout-alertpay.php?p=$1
+RewriteRule ^(mb-thanks|mb-cancel|mb-pending).html$ checkout-moneybookers.php?p=$1
+RewriteRule ^(2co-thanks|2co-cancel|2co-pending).html$ checkout-2co.php?p=$1
+RewriteRule ^(gc-thanks|gc-cancel|gc-pending).html$ checkout-google.php?p=$1
+RewriteRule ^index.html$ index.php
+RewriteRule ^special-offers/(.*)/(.*)/(.*)/index.html$ index.php?p=special-offers&cat=$1&order=$2&next=$3 [nc]
+RewriteRule ^latest-products/(.*)/(.*)/(.*)/index.html$ index.php?p=latest-products&cat=$1&order=$2&next=$3 [nc]
+RewriteRule ^contact-us/(.*)/index.html$ index.php?cpID=$1 [nc]
+RewriteRule ^product/(.*)/(.*)/index.html$ index.php?pID=$2 [nc]
+RewriteRule ^product-desc/(.*)/index.html$ index.php?pDesc=$1 [nc]
+RewriteRule ^product-img/(.*)/index.html$ index.php?pImg=$1 [nc]
+RewriteRule ^product-image/(.*)/index.html$ index.php?pImage=$1 [nc]
+RewriteRule ^video/(.*)/index.html$ index.php?pVideo=$1 [nc]
+RewriteRule ^mp3/(.*)/index.html$ index.php?pMP3=$1 [nc]
+RewriteRule ^category/(.*)/(.*)/(.*)/(.*)/(.*)/index.html$ index.php?pCat=$2&brand=$3&filter=$4&next=$5 [nc]
+RewriteRule ^order/(.*)/index.html$ index.php?vOrder=$1 [nc]
+RewriteRule ^special-offers/(.*)/(.*)/(.*)/index.html$ index.php?p=special-offers&cat=$1&order=$2&next=$3 [nc]
+RewriteRule ^latest-products/(.*)/(.*)/(.*)/index.html$ index.php?p=latest-products&cat=$1&order=$2&next=$3 [nc]
+RewriteRule ^feed/cat-(.*).html$ index.php?cFeed=$1 [nc]
+RewriteRule ^feed/special-offers.html$ index.php?rssFeed=special [nc]
+RewriteRule ^feed/latest-products.html$ index.php?rssFeed=latest [nc]
+RewriteRule ^feed/special-offers/(.*)/index.html$ index.php?rssFeed=special-$1 [nc]
+RewriteRule ^feed/latest-products/(.*)/index.html$ index.php?rssFeed=latest-$1 [nc]
+RewriteRule ^pdl/(.*)/index.html$ index.php?pdl=$1 [nc]
+RewriteRule ^zip/(.*)/index.html$ index.php?zip=$1 [nc]
+RewriteRule ^help-(.*).html$ index.php?help=$1 [nc]
+RewriteRule ^np/(.*)/(.*)/(.*)/index.html$ index.php?np=$2&next=$3 [nc]
+RewriteRule ^np/(.*)/(.*)/index.html$ index.php?np=$2 [nc]
+RewriteRule ^checkout/clear.html$ index.php?clearCart=yes [nc]
+RewriteRule ^edit/(.*)/index.html$ index.php?ppCE=$1 [nc]
+RewriteRule ^search/(.*)/(.*)/(.*)/(.*)/index.html$ index.php?sKey=$1&cat=$2&filter=$3&next=$4 [nc]
+
+#===================#
+# URL REWRITE RULES #
+#===================#
+
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_FILENAME} !-l
+   RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>

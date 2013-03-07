@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>Shopping Cart - Checkout: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>Shipping Selectors v Standard</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Note that the Maian Cart checkout page has 2 similar, but slightly different displays depending on whether you have shipping options in place. If you have shipping options, visitors are
+  required to choose shipping options before they can checkout, where as no shipping options loads all the other cart options by default. Try it with and without zones to see the difference.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Checkout</p>
+</div>
+
+<div class="blockWrapper">
+  <p>There are many aspects to the Maian Cart checkout routine, each of which are detailed below. When you load the checkout page you`ll see items in your cart as follows:<br /><br />
+  <img class="gateimg" src="images/cart/22.jpg" alt="" title="" />
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Understanding Checkout Routine</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The only time a visitor will see items in their basket is when they are in the store area. As soon as they are transferred to a payment gateway (ie: Paypal), they will NOT see their items listed
+  in a basket format. This is because Maian Cart does not utilise gateway cart options, but instead processes the payment as a single entity. After payment a unique code is transmitted back to the store to update the purchases and send e-mails.<br /><br />
+  Once you test the system you`ll understand it better.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Clear Cart</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The 'Clear Cart' link clears all items in cart.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Remove Item</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Clicking the 'Remove' link beneath a product removes that item from the basket. Clicking the quantity adjustment icon will also trigger a delete prompt if it reaches 0. Click 'OK' at
+  the prompt to delete or 'Cancel' to ignore:<br /><br />
+  <img class="gateimg" src="images/cart/23.jpg" alt="" title="" />
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Changing Quantities</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Use the '+' and '-' buttons to increase or decrease quantity. Product price will auto update as will the quantity next to the product name. If you exceed a stock level an error will appear.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Product Attributes</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you added any buy options to your cart, these are shown beneath the product name. Price is inclusive of additional costing:<br /><br />
+  <img class="gateimg" src="images/cart/52.jpg" alt="" title="" />
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Personalised Option</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you have added a personalised item to your cart, it will appear with the personalised item info beneath the product.<br /><br />
+  <img class="gateimg" src="images/cart/25.jpg" alt="" title="" /><br /><br />
+  You can edit/update your personalised items directly on the checkout page by clicking the 'Edit Personalisation' link. This launches a pop up with the edit options:<br /><br />
+  <img class="gateimg" src="images/cart/26.jpg" alt="" title="" /><br /><br />
+  Clicking to close this window refreshes the personalised options on the checkout page. There are NO options to delete just the personalisation. If you wish to completely remove this, delete product from cart.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Shipping</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The shipping selectors only apply if shipping zones are set. These will not appear if you have no zones. Choose your country and area/region to load
+  available shipping options if applicable:<br /><br />
+  <img class="gateimg" src="images/cart/27.jpg" alt="" title="" /><br /><br />
+  Radio buttons are shown next to each option. Choose the option you prefer. To reload shipping options, click 'Change Selection'.<br /><br />
+  <b>CHANGING QUANTITIES OR PERSONALISED DATA WILL AUTO RE-LOAD SHIPPING OPTIONS &amp; OTHER CHECKOUT OPTIONS IF APPLICABLE</b><br /><br />
+  Clicking a radio button loads the rest of the checkout page.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Newsletter Opt-In</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you have the newsletter opt-in enabled, a newsletter signup box will appear:<br /><br />
+  <img class="gateimg" src="images/cart/44.jpg" alt="" title="" />
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Discount Coupons</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you have a coupon code, enter it into the box provided:<br /><br />
+  <img class="gateimg" src="images/cart/28.jpg" alt="" title="" /><br /><br />
+  After clicking 'Add' totals are auto refreshed.<br /><br />
+  <img class="gateimg" src="images/cart/29.jpg" alt="" title="" /><br /><br />
+  Click 'Remove' to remove the discount coupon.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Review Totals</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Once you have applied coupons and shipping, review your basket totals:<br /><br />
+  <img class="gateimg" src="images/cart/30.jpg" alt="" title="" /><br /><br />
+  Discounts and total breakdowns are shown for cart order.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Checkout &amp; Pay</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Once you are happy with your order, choose a payment option and click 'Checkout &amp; Pay'.<br /><br />
+  <img class="gateimg" src="images/cart/31.jpg" alt="" title="" /><br /><br />
+  If enabled, some payment options may display another screen asking for name/address details. For example, bank transfers or phone/cheque payments. This screen displays:<br /><br />
+  <img class="gateimg" src="images/cart/32.jpg" alt="" title="" /><br /><br />
+  Complete the info before completing order.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Paying</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Depending on which payment method you chose, you should follow the on screen instructions to complete payment.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Cancelling Payments</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Options are provided by each gateway to cancel a payment. If this is clicked, visitor is returned to store and no payment is sent or processed.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

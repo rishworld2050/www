@@ -1,0 +1,11 @@
+Hello,
+
+This is to confirm that your email address has been removed from our newsletter, thank you.
+
+You will receive no further mailings from us.
+
+Kind regards,
+
+----------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}

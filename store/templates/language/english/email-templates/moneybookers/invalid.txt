@@ -1,0 +1,21 @@
+Hello,
+
+A transaction has occured from your store that should be investigated.
+
+This error occurs when the transaction md5 hash does not match the md5 hash created by the cart system. Check your secret word is correct. If it is, this may be a fraud attempt.
+
+For more information check the following log file:
+{LOG_FILE}
+
+or log into your Moneybookers account for more information:
+http://www.moneybookers.com
+
+If you are testing, it may be that your Moneybookers settings or cart setup isn`t configured correctly. Check your setup. 
+
+If you are in test mode, try a live payment to rule out the test server isn`t returning an invalid response.
+
+Kind regards,
+
+------------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}

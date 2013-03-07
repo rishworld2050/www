@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>BB Code: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>BB Code</p>
+</div>
+
+<div class="blockWrapper">
+  <p>BB Code or Bulletin Board Code is a lightweight markup language used to format data. The available tags are usually indicated by square brackets ([]) surrounding a keyword, and are parsed before being translated into a markup language that web browsers understand. Examples:<br /><br />[b]Bold[b] = <b>Bold Text</b><br />[link=http://www.google.co.uk]Google[/link] = <a href="http://www.google.co.uk">Google</a><br /><br />BBCode was devised to provide a safer, easier and more limited way of allowing users to format their messages.<br /><br />Text &copy;Wikipedia
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>BB Code in Maian Cart</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Used on the following:<br /><br />
+  Category/product descriptions<br />
+  New page text<br />
+  Payment method information<br />
+  Cart offline text
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Styling BB Code</p>
+</div>
+
+<div class="blockWrapper">
+  <p>BB Code is simply converted to the correct XHTML markup using classes. To style these, edit the main styleheet and look for the BB Code attributes at the bottom of the file.
+    <span class="infoBlock">
+     <span class="li">
+      <span class="highlight">stylesheet.css
+      </span>
+     </span>
+    </span>
+    For example if you wanted to make all code that appears between [b][/b] tags blue, find:
+    <span class="infoBlock">
+     <span class="li">
+      <span class="highlight">.bbBold {<br />
+      &nbsp;&nbsp;font-weight: bold;<br />
+      }<br />
+      </span>
+     </span>
+    </span>
+    And change to:
+    <span class="infoBlock">
+     <span class="li">
+      <span class="highlight">.bbBold {<br />
+      &nbsp;&nbsp;font-weight: bold;<br />
+      &nbsp;&nbsp;color: blue;<br />
+      }<br />
+      </span>
+     </span>
+    </span>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Tag Case Issues</p>
+</div>
+
+<div class="blockWrapper">
+  <p>BB Code can be uppercase or lowercase, but not a combination of both. The following are ok:
+    <span class="infoBlock">
+     <span class="li">
+      <span class="highlight">[b]Bold[/b]<br />
+      [B]Bold[/B]
+      </span>
+     </span>
+    </span>
+    The following are NOT ok:
+    <span class="infoBlock">
+     <span class="li">
+      <span class="highlight">[List]Bold[/LiST]<br />
+      [dEL]Bold[/Del]
+      </span>
+     </span>
+    </span>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>YouTube Videos</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you are using the BBcode tags for YouTube videos, you can alter the width/height in the 'control/defined.inc.php' file.<br /><br />
+  Look for the 'YOU_TUBE_EMBED_CODE' directive. Use {CODE} where the YouTube code should appear.<br /><br />
+  Note that using iframe data may break the code validation. 
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Vimeo Videos</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you are using the BBcode tags for Vimeo videos, you can alter the width/height in the 'control/defined.inc.php' file.<br /><br />
+  Look for the 'VIMEO_EMBED_CODE' directive. Use {ID} where the Vimeo video ID should appear.<br /><br />
+  Note that using iframe data may break the code validation.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>MP3 Player</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you are using the BBcode tags to load an mp3 file, you can alter the appearance in the 'control/defined.inc.php' file.<br /><br />
+  Look for the 'MP3_EMBED_CODE' directive. Use {MP3} where the mp3 path should load. Additional flashvars parameters as follows:<br /><br />
+  <b>autoplay</b> = 	1 to auto-play<br />
+  <b>loadingcolor</b> = 	The colour of loading bar<br />
+  <b>buttoncolor</b> = 	The colour of the buttons<br />
+  <b>slidercolor</b> = The colour of the player bar<br />
+  <b>byteslimit</b> =	If it is a mp3 streaming, the stream will restart at the bytes limit, for prevent overload.<br /><br />
+  More information <a href="http://flash-mp3-player.net/players/mini/documentation/" onclick="window.open(this);return false">here</a>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable/Disable</p>
+</div>
+
+<div class="blockWrapper">
+  <p>BB Code is enabled/disabled globally in the <a href="system-1.html">settings</a>.
+  </p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

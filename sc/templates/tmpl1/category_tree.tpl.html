@@ -1,0 +1,16 @@
+{* category navigation tree *}
+
+{section name=i loop=$categories_tree}
+
+  {section name=j loop=$categories_tree max=($categories_tree[i][2]-2)}&nbsp;&nbsp;&nbsp;&nbsp;{/section}
+
+  {if $categoryID == $categories_tree[i][0]}
+	{* selected node => point category and don't make a link *}
+	<b><font color=brown>{$categories_tree[i][1]}</font></b><br>
+
+  {else}
+	{* not selected node => make a link to a category *}
+	<a href="index.php?categoryID={$categories_tree[i][0]}" {if $categories_tree[i][2] > 0}class=category_child {/if}>{$categories_tree[i][1]}</a><br>
+
+  {/if}
+{/section}

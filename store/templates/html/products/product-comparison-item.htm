@@ -1,0 +1,24 @@
+      <li title="{product_title}"{saleItem}>
+        <span class="image">
+          {a}<img src="{image}" alt="{product_title}" title="{product_title}" />{/a}
+          <span class="zoom"><a href="{big_image_url}" title="{enlarge}" {colorbox}>{enlarge}</a></span>
+          {sale}
+        </span>
+        <span class="title">
+         {a}{product_title}{/a}
+         <span class="description">
+          {description}
+           <span class="desc">
+            {out_of_stock}
+            <a href="{desc_url}" title="{desc}" onclick="$(this).colorbox({iframe: true,title: function() {return '&lt;a class=\'colorbox_details\' href=\'{product_url}\' title=\'{view_product}\'>{view_product}&lt;/a&gt;'}})">{desc}</a>
+           </span>
+         </span>
+        </span>
+        <span class="price">
+         {price}
+         <span class="more_info">
+           {product_link}
+         </span>
+        </span>
+        <br class="clear" />
+      </li>

@@ -1,0 +1,14 @@
+/*
+  Script: Maian Cart v2.0
+  Programmed & Designed by: David Ian Bennett
+  E-Mail: support@maianscriptworld.co.uk
+  Software Website: http://www.maiancart.com
+  Script Portal: http://www.maianscriptworld.co.uk
+  
+  Store Stylesheet - IE6 Adjustments
+*/
+
+/* For menu. IE6 doesn`t like inline-block */
+* html .ddsmoothmenu ul li a {
+  display: block;
+}

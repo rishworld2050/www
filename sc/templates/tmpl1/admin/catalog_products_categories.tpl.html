@@ -1,0 +1,123 @@
+{* products and categories view *}
+
+<p>
+<table border="0" cellspacing="0" cellpadding="10" width="100%">
+
+<tr>
+ <td width="25%" bgcolor="#D2D2FF" align="center"><b>{$smarty.const.ADMIN_CATEGORY_TITLE}</b></td>
+ <td width="75%" bgcolor="#F5F5B2" align="center"><b>{$smarty.const.ADMIN_PRODUCT_TITLE}</b></td>
+</tr>
+
+
+{* categories *}
+<tr>
+<td valign="top" bgcolor="#E2E2FF" width="25%">
+
+	<table width="100%" border="0">
+	 <tr>
+	 <td colspan=3><a href="admin.php?dpt=catalog&sub=products_categories&categoryID=0" style="font-weight: bold;">{$smarty.const.ADMIN_CATEGORY_ROOT}</a> ({$products_in_root_category})</td>
+	 </tr>
+	 {section name=i loop=$categories}
+	 <tr>
+	 <td>{section name=j loop=$categories[i][5] max=$categories[i][5]}&nbsp;&nbsp;&nbsp;&nbsp;{/section}<a href="admin.php?dpt=catalog&sub=products_categories&categoryID={$categories[i][0]}"{if $categories[i][5] eq 0} style="font-weight: bold;"{/if}>{$categories[i][1]}</a></td>
+	 <td>({$categories[i][3]})</td>
+	 <td align="right"><font color="red">[</font><a class="small" href="javascript:open_window('category.php?c_id={$categories[i][0]}&w={$categories[i][4]}',400,400);">edit</a><font color=red>]</font></td>
+	 </tr>
+	 {/section}
+	</table>
+
+	<br><center>[ <a href="javascript:open_window('category.php?w=-1',400,400);">{$smarty.const.ADD_BUTTON}</a> ]</center><br>
+
+</td>
+
+
+{* products *}
+<td valign="top" bgcolor="#FFFFE2" align="center" width="75%">
+
+	<br><center><b>{$category_name}:</b></center><br>
+
+	  {if $categoryID eq 0}
+
+		<p>{$smarty.const.ADMIN_ROOT_WARNING}
+
+	  {/if}
+
+	  {if $products_count eq 0}
+
+		<p><center>{$smarty.const.STRING_EMPTY_CATEGORY}</center>
+
+	  {else}
+		<form action="admin.php" method="POST">
+		<table border="0" cellspacing="0" cellpadding="5" width="90%">
+		<tr bgcolor="#DAD5A3" align="center"><td width="1%">{$smarty.const.ADMIN_ENABLED}</td><td>{$smarty.const.ADMIN_PRODUCT_CODE}</td><td>{$smarty.const.ADMIN_PRODUCT_NAME}</td><td>{$smarty.const.ADMIN_PRODUCT_RATING}</td><td>{$smarty.const.ADMIN_PRODUCT_PRICE}, {$currency_iso_3}</td>
+		<td>{$smarty.const.ADMIN_PRODUCT_INSTOCK}</td><td>{$smarty.const.ADMIN_PRODUCT_PICTURE}</td><td>{$smarty.const.ADMIN_PRODUCT_BIGPICTURE}</td>
+		<td>{$smarty.const.ADMIN_PRODUCT_THUMBNAIL}</td><td width=1%>&nbsp;</td><td width=1%>&nbsp;</td></tr>
+
+		{section name=i loop=$products}
+
+			<tr bgcolor="#{cycle values="FFFFE2,F5F5C5"}">
+
+			<td align=center>
+			 <input type=checkbox name=enable_{$products[i][0]} {if $products[i][9] eq 1}value=on checked{else}value=off{/if}>
+			</td>
+
+			<td>
+			 <a href="javascript:open_window('products.php?productID={$products[i][0]}',550,600);">{$products[i][10]}</a>
+			&nbsp;
+			</td>
+
+			<td>
+			<a href="javascript:open_window('products.php?productID={$products[i][0]}',550,600);">{$products[i][1]}</a>&nbsp;
+			</td>
+
+			<td align=right>{$products[i][2]}&nbsp;</td>
+
+			<td align=center>
+			<input type=text name=price_{$products[i][0]} size=5 value={$products[i][3]}>
+			</td>
+
+			<td align=center>
+			<input type=checkbox name=instock_{$products[i][0]} size=5{if $products[i][4]>0} checked{/if}>
+			</td>
+
+			<td align=center>
+			{if $products[i][5] ne ""}{$smarty.const.ANSWER_YES}{else}<font color=red>{$smarty.const.ANSWER_NO}</font>{/if}
+			</td>
+			<td align=center>
+			{if $products[i][6] ne ""}{$smarty.const.ANSWER_YES}{else}<font color=red>{$smarty.const.ANSWER_NO}</font>{/if}
+			</td>
+			<td align=center>
+			{if $products[i][7] ne ""}{$smarty.const.ANSWER_YES}{else}<font color=red>{$smarty.const.ANSWER_NO}</font>{/if}
+			</td>
+
+			<td align=center>
+			 {if $products[i][5] ne ""}
+				<a href="admin.php?dpt=catalog&sub=special&new_offer={$products[i][0]}"><img src="images/admin_special_offer.gif" border=0 alt="{$smarty.const.ADMIN_ADD_SPECIAL_OFFERS}"></a>
+			 {else}&nbsp;
+			 {/if}
+			</td>
+
+			<td><a href="javascript:confirmDelete({$products[i][0]},'{$smarty.const.QUESTION_DELETE_CONFIRMATION}','admin.php?dpt=catalog&sub=products_categories&categoryID={$categoryID}&terminate=');"><img src="images/backend/button_delete.gif" border=0 alt="{$smarty.const.DELETE_BUTTON}"></a></td>
+
+			</tr>
+
+		{/section}
+
+		</table>
+		<input type=hidden name=products_update value=1>
+		<input type=hidden name=dpt value="catalog">
+		<input type=hidden name=sub value="products_categories">
+		<input type=hidden name=categoryID value="{$categoryID}">
+		<br><input type=submit value="{$smarty.const.SAVE_BUTTON}">
+		</form>
+
+	  {/if}
+
+
+	<p><center>[ <a href="javascript:open_window('products.php',550,600);">{$smarty.const.ADD_BUTTON}</a> ]</center><br>
+
+</td>
+
+
+</tr>
+</table>

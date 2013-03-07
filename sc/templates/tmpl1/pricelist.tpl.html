@@ -1,0 +1,19 @@
+{* show pricelist *}
+
+<center><h1>{$smarty.const.STRING_PRICELIST} {$shopname}</h1>
+<table border=0 cellspacing=1 bgcolor={$smarty.const.CONF_MIDDLE_COLOR} cellpadding=3 width=95%>
+ {section name=i loop=$pricelist_elements}
+	<tr bgcolor=white>
+	<td {if $pricelist_elements[i][4] ne 1}colspan=2{/if} bgcolor=#{$pricelist_elements[i][3]} width=100%>
+
+	 {section name=j loop=$pricelist_elements max=($pricelist_elements[i][2]-2)}&nbsp;&nbsp;&nbsp;{/section}
+
+	 <a href="index.php?{if $pricelist_elements[i][4] eq 1}productID{else}categoryID{/if}={$pricelist_elements[i][0]}"{if ($pricelist_elements[i][4] eq 1)} class=standard{/if}>{$pricelist_elements[i][1]}</a>
+
+	</td>
+	{if ($pricelist_elements[i][4] eq 1)}
+	<td width=1% align=center><nobr>{$pricelist_elements[i][5]}</nobr></td>
+	{/if}
+	</tr>
+ {/section}
+</table></center><br>

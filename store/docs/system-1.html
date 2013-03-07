@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>General Settings: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>Website Name</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is the name of your website or store.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Search Engine Friendly URLs</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enables search engine friendly urls via htaccess. NOT supported on all servers, so make sure your server supports .htaccess before enabling. If your server does not support this you
+  may see a 404 or a 500 error message. For more information on the search engine friendly urls, see the <a href="install-3.html">Seo Urls</a> section.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Web Installation HTTP Path</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is the FULL http path to your store folder, NOT including a trailing slash. Examples:<br /><br />
+  <b>http://www.yoursite.com/store</b> (Installed in 'store' folder)<br />
+  <b>http://www.yoursite.com</b> (Root installation)
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Server Path to Store Folder</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is the FULL server path to your store folder, not including the trailing slash. Examples:<br /><br />
+  <b>/home/server_name/public_html/store</b> (Linux)<br />
+  <b>C:/store</b> (Windows)br /><br /><br />
+  If you aren`t sure of this, contact your host. Alternatively, type the following into a text editor:<br /><br />
+  &lt;?php<br />
+  echo dirname(__FILE__);<br />
+  ?&gt;<br /><br />
+  Save as a .php file and upload into your store installation folder. Then access in your browser.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Default Meta Keywords</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Default meta keywords separated by a comma. For search engines.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Default Meta Description</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Default meta description. For search engines.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Select Language</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Specify system language.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If this is enabled, help tips appears in the admin area by hovering over the <img src="images/help.png" style="vertical-align:bottom" alt="" title="" /> image. If you wish, these can be
+  disabled.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Convert Microsoft Word&reg; Smart Quotes</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Microsoft smart quotes can cause formatting issues and are not valid html. If you are copying from word, you may wish to enable this feature, which attempts to convert smart quotes to standard
+  apostrophes.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Download Folder Name</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Specify base folder name for product downloads. This should exist outside of your web root to prevent being accessed by download managers. If you are using the download manager, this folder must also be writeable.<br /><br />If you are not selling downloadable products, this can be ignored or left blank.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Server Path to Download Folder</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Specify the server path to the download folder left. This is a SERVER path and NOT a url. Path must NOT include the download folder name and have NO trailing slash.<br /><br />Example. Lets say your "Download Folder Name" is "downloads" located at:<br /><br /><b>/home/server_name/downloads</b><br /><br />The path you would set here is:<br /><br /><b>/home/server_name</b><br /><br />If you are not selling downloadable products, this can be ignored or left blank.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable BB Code</p>
+</div>
+
+<div class="blockWrapper">
+  <p>BBCode or Bulletin Board Code is a lightweight markup language used to format data. The available tags are usually indicated by square brackets ([]) surrounding a keyword, and are parsed before being translated into a markup language that web browsers understand. Examples:<br /><br />[b]Bold Text[b] = <b>Bold Text</b><br />[link=http://www.google.co.uk]Google[/link] = <a href="http://www.google.co.uk">Google</a><br /><br />BBCode was devised to provide a safer, easier and more limited way of allowing users to format their messages.<br /><br />Text &copy;Wikipedia</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Admin Folder Name</p>
+</div>
+
+<div class="blockWrapper">
+  <p>For security it is recommended the 'admin' directory be renamed to something unique. If you wish to do this, rename and enter new folder name here.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Activate E-Mails</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This activates /de-activates system emails. If you are testing on localhost and you don`t have a mail server, this should be disabled. It should always be enabled on a live environment.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Main E-Mail Address</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is your main system email address.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Additional E-Mail Addresses</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you wish you can copy emails to other addresses. When an e-mail is sent to the main address, it will also be copied to any addresses specified here. Seperate multiple addresses with
+  a comma. This is optional.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>System Date Format</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Date format. Any valid PHP date format is ok. More information can be found on the PHP website:<br /><br />
+  <a href="http://php.net/manual/en/function.date.php" onclick="window.open(this);return false">http://php.net/manual/en/function.date.php</a>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>MySQL Date Format</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Dates are stored in US format by MySQL. YYYY-MM-DD. If you wish to use another format, enter it here. Any valid MySQL date format supported by DATE_FORMAT is fine. More information can be found on the MySQL website:<br /><br />
+  <a href="http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_date-format" onclick="window.open(this);return false">http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_date-format</a></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Javascript Calendar Date Format</p>
+</div>
+
+<div class="blockWrapper">
+  <p>When date fields are clicked in a form, a javascript calendar appears. Specify the date format you prefer.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Javascript Calendar Week Start Day</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Specify first day of week for calendar. UK is Sunday.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Server Time Adjustment</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you are running PHP5 or higher, the system automatically attempts to calculate your timezone. If you find your dates are incorrect (ie, you are in the UK, but your server is in the US), specify a time offset.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Disqus Comments System</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you wish to enable the Disqus comments system? This is a free comments system that can enable visitors to comment on your products. For more information, click <a href="features-15.html">here</a>.<br /><br />
+  Entering a short name enables the comments system. Leave blank to disable.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Developer Mode</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Activate developer mode if you are testing on a different domain to your registered Disqus website. Example: localhost. Make sure you disable for live server.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Facebook Page Link</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If your store/business has a facebook page, enter the url. Appears at the bottom of your store. <br /><br />Leave blank to disable.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Twitter Page Link</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If your store/business has a twitter page, enter the url. Appears at the bottom of your store. <br /><br />Leave blank to disable.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>ISBN Database API</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you wish to enable the ISBNDB api service? This can be usful if you are selling books. More info <a href="features-22.html">here</a>.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable RSS Feeds</p>
+</div>
+
+<div class="blockWrapper">
+  <p>RSS feeds enable visitors to subscribe to product categories, special offers or latest updates. Do you wish to enable rss feeds?</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>RSS Feed Limit</p>
+</div>
+
+<div class="blockWrapper">
+  <p>How many products to display in rss feeds?</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Sitemap</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you wish to enable the sitemap? A sitemap is an at a glance view of site links.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Display Preference</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If enabled, specify your display preference.<br /><br /><b>Product List View</b> - View of all categories, products (excluding out of stock) and additional site pages. Not recommended for heavy databases as load time could affect site performance. Use with caution.<br /><b>Category View</b> - Simple view of categories and additional site pages.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Products Per Page</p>
+</div>
+
+<div class="blockWrapper">
+  <p>How many products do you wish to show per page on category pages?</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Min Digits for Invoice No</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you want to pad invoice numbers with zeros? Invoice numbers correspond to database sale ids. The first sale will be 1, but you might want to specify the invoice as 000001. Set to 0 for invoice numbers to have no additional prefixed zeros or specify amount to add.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Flash Video Width / Flash Video Height</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Flash product video display size. 425 x 300 is recommended.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Sale Comparison Products Limit</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This option displays items that have been purchased along with the product being displayed. In other words, "Customers who bought this, also bought that" etc.<br /><br />Set to 0 for no display or enter limit for maximum amount of products to display.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Hit Counter</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you wish to enable the hit counter?</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Most Popular Products</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you want to display the most popular products? If enabled, this appears in the left menu. Set to 0 to disable or enter amount greater to enable</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Most Popular Display Preference</p>
+</div>
+
+<div class="blockWrapper">
+  <p>How do you want to order most popular products? By sales or by hits. Note that hits doesn`t really give a good indicator of whats popular as it simply orders by page views. Views don`t mean sales.<br /><br />If ordering by sales, free products can be excluded via the checkbox.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Latest Products Limit</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Specify maximum latest products to show on latest products page</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Max Product Desc Characters on Category Pages</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is the amount of the product short description characters you want to display on the category pages. Ideally the short description won`t be too long, but if it is you can restrict the amount of text shown. Set to 0 for no limit.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Most Recently Viewed Items</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you want to display the most recently viewed items for visitors? If enabled, this appears in the left menu. Note that this is session based and clears when the browser is closed.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Show Parent Categories on Store Homepage</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you wish to display your parent categories on your store homepage?</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Free Product Display Text</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Display price preference for free products. If left blank, defaults to 0.00 price display. Or enter alternative text. Applies to category and product pages. Max 10 Characters.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Additional Text Below Product Price</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Optional additional text to appear beneath product price on product page. You may wish to include a message that prices exclude tax etc. Leave blank for no additional text. Max 100 Characters.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Left Menu Box Ordering</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Specify the order display for the boxes in the left hand menu. These appear beneath the shopping basket.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>How Many Days to Keep Searches</p>
+</div>
+
+<div class="blockWrapper">
+  <p>How many days do you want to keep saved searches? If you have a busy site, searches should be cleared regularly. Enter amount in days. 0 to disable.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Search Low Stock Limit</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If low stock is selected on advanced search, set the max for low stock value. Must be at least 1.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Search Log</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you wish to enable the search log and log keywords?</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Thumbnail Width</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Thumbnail creation width. For auto thumbnail creation. Aspect ratio is taken into consideration, so creation size may not be exact. Max 9999.<br /><br />Actual display sizes can be controlled in the stylesheet.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Thumbnail Height</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Thumbnail creation height. For auto thumbnail creation. Aspect ratio is taken into consideration, so creation size may not be exact. Max 9999.<br /><br />Actual display sizes can be controlled in the stylesheet</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Thumbnail Quality (JPG/GIF)</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Thumbnail quality in dpi. Max 100.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Thumbnail Quality (PNG)</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Thumbnail quality. For PNG images its 0 to 9.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Auto Zip</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If auto zipping is enabled, a link is provided to consolidate all downloads into a single zip file. For this to function your server must have the ZIP functions enabled. Note that this
+  may struggle on some shared servers if the zip file is trying to create a large archive.<br /><br />
+  <b>IMPORTANT! This feature will NOT work for remote files. If any downloads in an order are remotely located, this is disabled.</b>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Zip Filesize Creation Limit</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Zip file size creation threshold. Zip creation may struggle on some shared environments when trying to handle large files. If you wish you can have the zip option enabled only when the combined size of all downloads is less than a certain limit.<br /><br />Size in Bytes Only. Examples:<br /><br />1024 x 1024 = <b>1048576</b> (1MB)<br />1024 x 1024 x 1024 = <b>1073741824</b> (1GB)<br /><br />Set to 0 for no limit</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>How Many Times Can Zip Files be Downloaded</p>
+</div>
+
+<div class="blockWrapper">
+  <p>How many times can zip files be downloaded per order/sale? Set to 0 for unlimited</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Zip Creation Timeout</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Timeout in seconds for zip creation. Attempts to adjust timeout via ini_set<br /><br />Set to 0 to use server default.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Zip Creation Memory Limit</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Memory limit allocated to zip creation. 8MB is usually standard set by server. Attempts to adjust limit via ini_set.<br /><br />Set to 0 to use server default.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Folder for Additional Files</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Folder name for additional zip files. By default located at "<b>templates/additional-zip</b>". Any files included in this folder will be added to zip file downloads.<br /><br />If you wish to call this folder something else, specify new name here and rename folder manually. Folder must exist in "<b>templates</b>" directory.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

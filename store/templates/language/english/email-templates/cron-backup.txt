@@ -1,0 +1,9 @@
+--------------------------------------------------------
+MYSQL DATABASE SCHEMATIC BACKUP
+Store: {STORE}
+Date Created: {DATE_TIME}
+Script: Maian Cart v{VERSION}
+--------------------------------------------------------
+
+File enclosed:
+{FILE}

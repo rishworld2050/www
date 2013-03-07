@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>Google Checkout: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>What is Google Checkout?</p>
+</div>
+
+<div class="blockWrapper">
+  <p><a href="http://checkout.google.co.uk/" onclick="window.open(this);return false">Google Checkout</a> is an online payment processing service provided by Google aimed at simplifying the process of paying for online purchases. Users store their credit or debit card and shipping information in their Google Account, so that they can purchase at participating stores at the click of a button. <a href="http://checkout.google.co.uk/" onclick="window.open(this);return false">Google Checkout</a> also offers fraud protection, as well a unified page for tracking purchases and their status.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Google Checkout API</p>
+</div>
+
+<div class="blockWrapper">
+  <p><a href="http://checkout.google.co.uk/" onclick="window.open(this);return false">Google Checkout</a> API integrates into existing websites letting your customers buy items from you quickly and securely using a Google username and password. <a href="http://checkout.google.co.uk/" onclick="window.open(this);return false">Google Checkout</a> lets you charge customers' credit cards, track orders through your fulfillment process and receive order payments in your bank account.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>SSL Certificate</p>
+</div>
+
+<div class="blockWrapper">
+  <p>To utilise <a href="http://checkout.google.co.uk/" onclick="window.open(this);return false">Google Checkout</a> in Maian Cart your server <b>MUST</b> have a <a href="http://en.wikipedia.org/wiki/Secure_Sockets_Layer" onclick="window.open(this);return false">SSL</a> certificate installed. It will NOT work otherwise. If this option is not available to you, Google Checkout <b>MUST</b> be
+  disabled. There are a number of good SSL providers around. Many servers provide a shared certificate, but its recommended you install your own. If you aren`t sure how to install a SSL
+  certificate, contact your hosting company who should be happy to help.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Google Checkout API</p>
+</div>
+
+<div class="blockWrapper">
+  <p>1. Sign up for a <a href="https://checkout.google.com" onclick="window.open(this);return false">Google Checkout</a> account if you don`t already have one. This will provide you with a merchant key
+  and merchant ID.<br /><br />
+  2. Access your Google Checkout account and click 'Settings' then 'Integration' from the left hand menu.<br /><br />
+  <img class="gateimg" src="images/gateways/google1.jpg" alt="" title="" /><br /><br />
+  3. Uncheck the option 'My company will only post digitally signed carts'. Maian Cart is not required to be a digitally signed cart. The idea of digitally signed carts is to check that no data was tampered with during transmission to Google. Maian Cart performs the necessary security checks on all transactions and checks payment totals, currency codes etc. If post data was faked
+  to adjust payment totals for example, Maian Cart will reject the transmission.<br /><br />
+  4. Enter the following 'API callback URL':<br /><br />
+  <b>http://www.yoursite.com/cart/checkout-google.php</b> (Replacing the domain/path with your own correct path)<br /><br />
+  5. Select 'Notification as HTML' as the callback method.<br /><br />
+  6. Select 'Version 2.5' for the 'API Version'. If later versions are shown, choose the latest. If this doesn`t work, revert to 2.5<br /><br />
+  7. Finally, leave 'Notification Filtering' unchecked. Your screen should now look like the above.<br /><br />
+  <b>Note: DO NOT add shipping or tax options, these are handled by Maian Cart</b><br /><br />
+  Next, from the left hand menu select 'Preferences'.<br /><br />
+  <img class="gateimg" src="images/gateways/google2.jpg" alt="" title="" /><br /><br />
+  1. Check the radio button to 'Automatically authorise and charge the buyer's card.'. If you select the first option the buyers card will only be charged once you authorise the payment. This means
+  that on returning to the store from Google Checkout, buyers will never see their downloadable goods. The first option is not recommended if you are selling downloadable goods.<br /><br />
+  <b>NOTE: If you do prefer the first option you should enable the 'GC_CHARGEABLE_EMAILS' option in the 'control/defined.inc.php' file to send out pending emails. This will instruct the buyer that their order won`t be finalised
+  until payment has been accepted.</b><br /><br />
+  2. Maian Cart sends out order notification e-mails, but as a precautionary measure keep the 'Email me each time I receive an order, cancellation or other transaction' checked to receive e-mails
+  from the Google system.<br /><br />
+  3. 'Edit Charset Settings' can be ignored.<br /><br />
+  Google Checkout is now ready to go.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Google Checkout as Payment Option in Maian Cart</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Select 'Catalogue > Payment Methods'. Click the <img src="images/configuration.png" style="vertical-align:bottom" alt="" title="" /> icon and launch the Google Checkout configuration window. Complete the options shown
+  to activate Google Checkout. More info as follows:</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Merchant ID</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Your Google Checkout production or sandbox merchant ID.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Merchant Key</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Your Google Checkout merchant key.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Information About this Payment Method</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is presented to visitors if they click for more info on the gateway on the checkout page. Optional. Use <a href="features-20.html">BB Code</a> for formatting, HTML is not allowed.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Alternative Redirect Url (Optional)</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Alternative redirect url is the page a visitor will be directed to after a successful transaction. You should NOT use this option if you sell downloadable items as visitors will not be able to download their products immediately after purchase.<br /><br />Enter full url starting http://</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Live Payment URL</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Google Checkout`s live payment url. At the time of these docs it is:<br /><br />
+  https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/<br /><br />
+  This should not be changed unless altered by Google.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Sandbox Payment URL</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Google Checkout`s sandbox payment url. At the time of these docs it is:<br /><br />
+  https://sandbox.google.com/checkout/api/checkout/v2/checkoutForm/Merchant/<br /><br />
+  This should not be changed unless altered by Google.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Google Checkout</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enable / disable Google Checkout as payment option.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Google Sandbox</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Google Checkout has a sandbox system for testing. This enables you to test the payment system without taking live payments. For this you need to have 2 Sandbox accounts. A merchant account and a buyer account. More information here:<br /><br />
+  <a href="http://code.google.com/apis/checkout/developer/Google_Checkout_Basic_HTML_Sandbox.html#Create_Sandbox_Accounts" onclick="window.open(this);return false">Creating Sandbox Accounts</a><br /><br />
+  Once you have the Sandbox accounts set up you can use these for testing transactions via the store. Remember to enter your Sandbox Merchant ID/Key when testing and change to your live ID/Key when everything seems ok.<br /><br />
+  To activate in Maian Cart, set the payment mode to 'Test' on the 'System > General Settings > Global Payment Settings' page.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Google Checkout Test Mode</p>
+</div>
+
+<div class="blockWrapper">
+  <p>To activate in Maian Cart, set the payment mode to 'Test' on the 'System > General Settings > Global Payment Settings' page.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Passing Additional Payment Parameters</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart allows you to specify additional payment parameters besides the required system ones. This maybe useful if you need to pass a certain parameter to any gateway during
+  purchase. Some gateways have many parameters that enable/disable functions on the checkout page. To add addtional parameters for Google Checkout, enter array key => value pairs in the following file:<br /><br />
+  <b>classes/gateways/inclusions/google.php</b>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Performing Additional Actions After Successful Payment</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart allows you to perform additional actions after a successful transaction. This is useful if you need to execute additional code after the payment has been accepted. Edit the following file:<br /><br />
+  <b>classes/gateways/triggers/google.php</b><br /><br />
+  This is for advanced users.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Integration Console</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Google Checkout provides a handy integration console which logs any errors received from the website. An example is shown below:<br /><br />
+  <img class="gateimg" src="images/gateways/google3.gif" alt="" title="" /><br /><br />
+  To access this console, click 'Tools' > 'Integration Console' in your Google Checkout account area.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

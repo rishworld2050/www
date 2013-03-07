@@ -1,0 +1,24 @@
+{* order is placed *}
+
+{if $order_is_placed ne 0}
+
+	{$smarty.const.STRING_ORDER_PLACED}
+
+	{if $smarty.const.CONF_PAYPAL_INTEGRATION eq 1}
+	<p>
+	<center><form action="https://www.paypal.com/cgi-bin/webscr" method="POST">
+                          To pay with PayPal now please click this icon: 
+                          <p> 
+                            <input type="hidden" name="cmd" value="_xclick">
+							<input type="hidden" name="bn" value="webasyst">
+                            <input type="hidden" name="business" value="{$smarty.const.CONF_PAYPAL_EMAIL|replace:'"':'&quot;'}">
+                            <input type="hidden" name="item_name" value="Order #{$order_id}">
+                            <input type="hidden" name="amount" value="{$order_amount}">
+                            <input type="hidden" name="currency_code" value="{$currency_iso_3}">
+                            <input type="image" name="submit" src="http://images.paypal.com/images/x-click-but01.gif" alt="Pay with PayPal">
+    </form></center>
+	{/if}
+
+{else}
+	<br><br><br><center><b>{$smarty.const.CART_EMPTY}</b></center>
+{/if}

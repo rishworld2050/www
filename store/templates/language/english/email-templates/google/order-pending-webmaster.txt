@@ -1,0 +1,25 @@
+Hello,
+
+An order has been processed in your cart, but its payment status is 'Pending'.
+
+This is due to you not auto charging buyers accounts/cards. This can be changed on the 'Settings > 'Preferences' page in your Google Checkout Account.
+
+The buyer has been contacted with details about this status.
+
+To charge this sale, log into your Google Checkout account area:
+
+---------------------------------------------
+Google Order No: {ORDER_NO}
+---------------------------------------------
+
+http://checkout.google.com/
+
+Once you have accepted this payment further e-mails will follow from the system and this order will appear in your admin area as completed.
+
+Kind regards,
+
+------------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+Visitors IP Address(es): {ORDER_IP}

@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>Download Manager: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>Download Manager Restrictions</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The download manager enables you to manage your downloadable products. There are however, the following restrictions:<br /><br />
+  [<b>1</b>] - Only locally hosted files are supported. If you remotely host your downloads, use FTP to manage them.<br />
+  [<b>2</b>] - PHP5 or higher with <a href="http://php.net/manual/en/function.json-encode.php" onclick="window.open(this);return false">json_encode</a> enabled is required.<br />
+  [<b>3</b>] - As downloadable products should be stored outside of the web root, previews and downloads are NOT possible from within the download manager.<br />
+  [<b>4</b>] - File uploads are restricted to the limit imposed on your server. For large files, FTP is always recommended.<br />
+  [<b>5</b>] - Some command line functions may be required for some operations. If your server has them disabled the download manager may fail.<br /><br />
+  The following can be accomplished within the download manager:<br /><br />
+  [<b>1</b>] - New folders can be created. Existing folders can be moved to other locations via drag and drop.<br />
+  [<b>2</b>] - You can upload multiple files to any folder.<br />
+  [<b>3</b>] - You can rename files/folders and delete files/folders.<br /><br />
+  Other features are disabled as the download manager has been adapted for Maian Cart. If you find the download manager not suitable or you can`t get it to work, use FTP, such as
+  <a href="http://filezilla-project.org/" onclick="window.open(this);return false">FileZilla</a>, which is free.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Files &amp; Folders</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/1.jpg" alt="" title="" style="margin-bottom:5px" /><br />
+  <b>NOTE: It is highly recommended and good practice that files and folder names do NOT contain spaces or invalid characters. Use hyphens (-), underscores (_) or
+  alphanumeric characters (a-z,0-9) to be safe.</b>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Toggle Icon/List View</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/2.jpg" alt="" title="" /></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Back to Previous Folder/Reload Folder</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/3.jpg" alt="" title="" /></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Create New Folder</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/4.jpg" alt="" title="" /></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Upload/Add Files</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/5.jpg" alt="" title="" /></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Rename File</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/6.jpg" alt="" title="" /></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Drag and Drop Files</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/7.jpg" alt="" title="" /></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Delete Files/Folders</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/8.jpg" alt="" title="" /></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Right Click Options</p>
+</div>
+
+<div class="blockWrapper">
+  <p><img class="gateimg" src="images/elfinder/9.jpg" alt="" title="" /></p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Closing Notes</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you find the download manager not suitable or you can`t get it to work, use FTP, such as <a href="http://filezilla-project.org/" onclick="window.open(this);return false">FileZilla</a>, which is free.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{* special offers on the homepage *}
+
+<p>
+{if $save_successful ne NULL}
+{$save_successful}
+{/if}
+
+<p>
+{$smarty.const.ADMIN_SPECIAL_OFFERS_DESC}
+
+<form action="admin.php" method=POST>
+
+<table cellpadding=6 cellspacing=0>
+
+ <tr class="mainmenu_selected_{$current_dpt}">
+ <td align=center>{$smarty.const.ADMIN_PRODUCT_NAME}</td>
+ <td align=center>{$smarty.const.ADMIN_SORT_ORDER}</td>
+ <td>&nbsp;</td>
+ </tr>
+
+{section name=i loop=$offers}
+
+ <input type=hidden name="offer_productID_{$offers[i][0]}" value="{$offers[i][1]}">
+
+ <tr class="{cycle values="bg_white, bg_$current_dpt"}">
+ <td><a href="admin.php?dpt=catalog&sub=products_categories&categoryID={$offers[i][3]}">{$offers[i][4]}</a></td>
+ <td align=center><input type=text size=5 name="offer_sort_{$offers[i][0]}" value="{$offers[i][2]}"></td>
+ <td><a href="admin.php?dpt=catalog&sub=special&delete={$offers[i][0]}"><img src="images/backend/button_delete.gif" border=0 alt="{$smarty.const.DELETE_BUTTON}"></a></td>
+ </tr>
+
+{sectionelse}
+
+ <tr bgcolor=white>
+ <td colspan=3><nobr>{$smarty.const.ADMIN_NO_SPECIAL_OFFERS}</nobr></td>
+ </tr>
+
+{/section}
+
+</table>
+
+<p>
+<input type=hidden name="dpt" value="catalog">
+<input type=hidden name="sub" value="special">
+<input type=hidden name="save_offers" value="yes">
+
+<input type=submit value="{$smarty.const.SAVE_BUTTON}">
+
+</form>

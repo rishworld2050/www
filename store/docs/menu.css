@@ -1,0 +1,175 @@
+/*
+  Script: Maian Cart v2.0
+  Programmed & Designed by: David Ian Bennett
+  E-Mail: support@maianscriptworld.co.uk
+  Software Website: http://www.maiancart.com
+  Script Portal: http://www.maianscriptworld.co.uk
+  
+  Admin Menu Stylesheet
+*/
+
+#menu {
+  height:100%;
+  border:2px solid #cfcfcf;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -khtml-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  background:#f0f0f0;
+}
+
+.ddsmoothmenu {
+	font: bold 12px Verdana;
+	background: #fff;
+}
+
+.ddsmoothmenu ul {
+	z-index: 100;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.ddsmoothmenu ul li {
+	position: relative;
+	display: inline;
+	float: left;
+}
+
+.ddsmoothmenu ul li a.nav_first {
+	display: block;
+	color: #1e556a;
+	padding: 11px 0 11px 0;
+	text-decoration: underline;
+	text-transform: uppercase;
+	font: normal 12px verdana, sans-serif;
+	text-align: center;
+  border-right:1px solid #cfcfcf;
+   -webkit-border-radius: 5px 0 0 5px;
+  -khtml-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+.ddsmoothmenu ul li a.nav {
+	display: block;
+	padding: 11px 0 11px 0;
+	font: normal 12px verdana, sans-serif;
+	border-left: 0;
+	color: #1e556a;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-align: center;
+  border-right:1px solid #cfcfcf;
+}
+
+.ddsmoothmenu ul li a.nav_last {
+	display: block;
+	padding: 11px 0 11px 0;
+	font: normal 12px verdana, sans-serif;
+	border-left: 0;
+	color: #1e556a;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-align: center;
+  -webkit-border-radius: 0 5px 0 5px;
+  -khtml-border-radius: 0 5px 0 5px;
+  -moz-border-radius: 0 5px 0 5px;
+  border-radius: 0 5px 0 5px;
+}
+
+.ddsmoothmenu ul li a {
+	display: block;
+	text-indent: 30px;
+	color: #555;
+	padding: 11px 8px 11px 8px;
+	text-decoration: none;
+  background:#f0f0f0;
+}
+
+.ddsmoothmenu ul li a.nav_last {
+}
+
+* html .ddsmoothmenu ul li a {
+  display: inline-block;
+}
+
+.ddsmoothmenu ul li a.nav:hover {
+}
+
+.ddsmoothmenu ul li a.nav_last:hover {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+  -webkit-border-radius: 0 5px 0 5px;
+  -khtml-border-radius: 0 5px 0 5px;
+  -moz-border-radius: 0 5px 0 5px;
+  border-radius: 0 5px 0 5px;
+}
+
+.ddsmoothmenu ul li a.nav_first:hover {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+  -webkit-border-radius: 5px 0 0 5px;
+  -khtml-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+.ddsmoothmenu ul li a:hover {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+}
+
+.ddsmoothmenu ul li ul {
+	position: absolute;
+	left: 0;
+	display: none;
+  visibility: hidden;
+	border-bottom: 1px solid #cfcfcf;
+  margin:2px 0 0 0;
+}
+
+.ddsmoothmenu ul li ul li {
+	display: list-item;
+	float: none;
+}
+
+.ddsmoothmenu ul li ul li ul {
+	top: 0;
+}
+
+.ddsmoothmenu ul li ul li a {
+	font: normal 11px verdana, sans-serif;
+	width: 190px;
+  padding: 10px 5px 10px 5px;
+	margin: 0;
+	border: 1px solid #cfcfcf;
+	border-top: 0;
+  background:#fafafa url(images/menu-back.gif) no-repeat left center;
+}
+
+.downarrowclass {
+	display: none;
+}
+
+.rightarrowclass {
+	position: absolute;
+	top: 8px;
+	right: 5px;
+}
+
+.ddshadow {
+  position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	background: #9fecef;
+}
+
+.toplevelshadow {
+  opacity: 0.8;
+}

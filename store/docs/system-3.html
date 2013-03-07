@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>Currency Converter: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>Currency Converter</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart has a built in currency conversion system. This enables visitors to view prices in their own currencies as well as the default system currency. To access this
+  option in the admin area select 'System>Currency Converter'. Currencies are obtained from the European Central Bank via its daily <a href="http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml" title="Currency Feed" onclick="window.open(this);return false">xml feed</a>.<br /><br />
+  Only currencies shown in the admin area are supported by this option. Use the checkboxes provided to enable/disable currencies. If you don`t specify any currencies, the currency conversion drop down on your storefront will not appear.<br /><br />
+  Note that clicking the update button in the admin area also updates the currency rates. To manually update you would need to click this button from time to time or have the system auto update via a cron job/tab.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Currency Symbol Positioning and Character Entities</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you wish to alter ISO codes, HTML character entities or currency symbol positioning for currency converter currencies, see the arrays in the following file. (Don`t forget to always make
+  backups of edited files in case you make a mistake and the system fails).
+  <span class="infoBlock">
+    <span class="li">
+    <span class="highlight">
+    control/currencies.php
+    </span>
+    </span>
+  </span> 
+  </p>
+</div>  
+
+<div class="fieldHeadWrapper">
+  <p>Currency Format Override</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you find a particular currency doesn`t display how you want it to, you can use the format override option in the following file:
+  <span class="infoBlock">
+    <span class="li">
+    <span class="highlight">
+    control/currencies.php
+    </span>
+    </span>
+  </span> 
+  Use '{PRICE}' where you want the price to appear. See the 'Australian Dollar' override for an example. 
+  </p>
+</div> 
+
+<div class="fieldHeadWrapper">
+  <p>Auto Update via Cron Job/Tab</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The easiest way to make sure your currencies are up to date with the latest rates is to have the system automatically update them. This is done by using a Cron Tab or Cron Job. This is an
+  automated task performed by your server via the time specified. For the currency conversion a daily update would be recommended.
+  <span class="infoBlock">
+    <span class="li">
+    <span class="highlight">
+    /usr/local/bin/php /home/admin/domains/yourdomain.co.uk/public_html/cart/currency-updater.php<br />
+    php q /home/admin/domains/yourdomain.co.uk/public_html/cart/currency-updater.php<br />
+    /usr/local/bin/php q /home/admin/domains/yourdomain.co.uk/public_html/cart/currency-updater.php<br />
+    cmd /k C:\Windows\php\php.exe "C:\website\currency-updater.php" (Windows)
+    </span>
+    </span>
+  </span> 
+  In the windows example. using cmd /k keeps the command line window open. Remove this to close window after execution.<br /><br />
+  If you don`t understand this, contact your host for assistance. Path is almost always the FULL server path to the cron file.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Cron licence.lic domain encoding error</p>
+</div>
+
+<div class="blockWrapper">
+  <p>On some servers the cron may return the following output:<br /><br />
+  <b>The following encoding error has occured while running this software: The 'licence.lic' file within this installation cannot run on this server. Licence file is encoded for a different domain.</b><br /><br />
+  If this happens you need to instead run the 'cron.php' file in your store root. See the notes in that file for further instructions.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Understanding Cron Tabs/Jobs</p>
+</div>
+
+<div class="blockWrapper">
+  <p><a href="http://www.google.co.uk/#hl=en&amp;q=cron+tabs+or+cron+jobs" onclick="window.open(this);return false">Help and Information on Cron Tabs or Cron Jobs</a></p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

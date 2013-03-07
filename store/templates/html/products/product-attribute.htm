@@ -1,0 +1,7 @@
+      <li><span class="title">{name}:</span>
+      <select id="attr_group_{id}" name="attr[{id}]" {multiple} onchange="if(this.value!='0'){$(this).removeClass('error_highlight')}">
+       <option value="0">- - - - -</option>
+       {attributes}
+      </select>
+      <input type="hidden" name="reqAttr[{id}]" value="{isRequired}" />
+      </li>

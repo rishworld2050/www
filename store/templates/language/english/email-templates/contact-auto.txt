@@ -1,0 +1,13 @@
+Hello {NAME},
+
+Thank you for your recent enquiry to {WEBSITE_NAME} on {DATE}.
+
+A member of staff will reply as soon as possible.
+
+Kind regards,
+
+------------------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+Your IP address(es) logged as: {IP}

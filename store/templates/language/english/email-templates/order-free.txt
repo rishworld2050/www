@@ -1,0 +1,28 @@
+{WEBSITE_NAME} - Free Order - #{INVOICE_NO}
+---------------------------------------------------------------
+
+Hello {NAME},
+
+Thank you for your order at {WEBSITE_NAME}.
+
+FREE ITEMS:
+----------------------------------------------------------------
+
+{PRODUCT_ORDER}
+
+----------------------------------------------------------------
+Order Total: 0.00
+----------------------------------------------------------------
+
+Thanks for downloading some of our free products, we hope you like them.
+
+Please download your products at the following url:
+{DOWNLOAD_URL}
+
+Thank you,
+
+----------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+Your IP address(es) logged as: {ORDER_IP}

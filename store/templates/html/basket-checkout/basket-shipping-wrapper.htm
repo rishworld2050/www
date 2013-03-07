@@ -1,0 +1,57 @@
+      
+      <!-- Load default shipping country/regions -->
+      <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function() {
+          reloadRegions('{def_country}');
+        });
+        //]]>
+      </script>
+      
+      <div class="shippingWrapper">
+        
+        <h2 class="title">
+          <span>{text}:</span>
+        </h2>  
+        
+        <div class="optionsWrapper">
+          
+          <div class="selectors" id="selectors">
+            
+            <div class="countries">
+              
+              <label>{text2}:</label>
+              <select name="countries" id="countries" onchange="reloadRegions('0')">
+              <option value="0">- - - - - - - - - -</option>
+               {countries}
+              </select>
+            
+            </div>
+          
+            <div class="areas">
+              
+              <label>{text3}:</label>
+              <span id="loader" style="float:left"></span>
+              <select name="areas" id="areas" onchange="if ($('#areas').val()>0){loadShipOptions()}">
+              <option value="0">- - - - - - - - - -</option>
+              {areas}
+              </select>
+            
+            </div>
+            
+            <br class="clear" />
+          </div>
+          
+          <div class="ship_options" id="ship_options">
+            <!-- DO NOT remove this empty div -->          
+          </div>
+          
+          <p class="systemMessage" id="sysMsgShip">
+             <!-- DO NOT remove this empty paragraph tag -->
+          </p>
+          
+          <br class="clear" />
+        </div>
+        
+        <p class="bottom"></p>
+      </div>

@@ -1,0 +1,31 @@
+/*
+  Script: Maian Cart v2.0
+  Programmed & Designed by: David Ian Bennett
+  E-Mail: support@maianscriptworld.co.uk
+  Software Website: http://www.maiancart.com
+  Script Portal: http://www.maianscriptworld.co.uk
+  
+  Store Stylesheet - IE6 Adjustments
+*/
+
+/* Greybox */
+#GB_caption {
+  width:99%;
+}
+
+/* For menu. IE6 doesn`t like inline-block */
+* html .ddsmoothmenu ul li a {
+  display: block;
+}
+
+/* Homepage graph */
+#homeArea .homeAreaLeft #chartgraph {
+  height:218px;
+  width:680px;
+}
+
+#homeArea .homeAreaLeft #chartgraph_nostats {
+  height:218px;
+  width:680px;
+  background:url(templates/images/no-stats.gif) no-repeat 50% 50%;
+}

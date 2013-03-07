@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>2Checkout: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>What is 2Checkout?</p>
+</div>
+
+<div class="blockWrapper">
+  <p><a href="http://www.2checkout.com" onclick="window.open(this);return false">2Checkout</a> helps merchants start selling online in just a few minutes and without any hassle! It provides you an integrated payment solution to help you handle your customer payments from start to finish.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>INS: Instant Notification System</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The Instant Notification Service (INS) is designed to offer vendors a way to automate order management processes by accepting order information via web posts. Maian Cart supports INS.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable 2Checkout INS</p>
+</div>
+
+<div class="blockWrapper">
+  <p>1. Sign up for an account at <a href="http://www.2checkout.com" onclick="window.open(this);return false">2Checkout</a> if you don`t already have one.<br /><br />
+  2. Log into your 2Checkout account and select 'Notifications' from the top menu:<br /><br />
+  <img class="gateimg" src="images/gateways/2co1.jpg" alt="" title="" /><br /><br />
+  3. In the 'Global' box, enter your store url to the 'checkout-2co.php' file in your cart root. Example:<br /><br />
+  <b>http://www.yoursite.com/cart/checkout-2co.php</b> (Replacing the domain/path with your own correct path)<br /><br />
+  <img class="gateimg" src="images/gateways/2co2.jpg" alt="" title="" /><br /><br />
+  <b>NOTE. 2Checkout`s notification can only be sent to the domain specified in your profile. Your cart MUST be on this same domain.</b><br /><br />
+  4. Click 'Apply' to add the url to ALL boxes on the page. Make sure ALL options are enables, then click 'Save Settings'.<br /><br />
+  2Checkout is now ready to go.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable 2Checkout as Payment Option in Maian Cart</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Select 'Catalogue > Payment Methods'. Click the <img src="images/configuration.png" style="vertical-align:bottom" alt="" title="" /> icon and launch the 2Checkout configuration window. Complete the options shown
+  to activate 2Checkout. More info as follows:</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Account Number</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is your 2checkout account number.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Secret Word</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is your 2checkout secret word as set in your 2checkout account area.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Information About this Payment Method</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is presented to visitors if they click for more info on the gateway on the checkout page. Optional. Use <a href="features-20.html">BB Code</a> for formatting, HTML is not allowed.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Alternative Redirect Url (Optional)</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Alternative redirect url is the page a visitor will be directed to after a successful transaction. You should NOT use this option if you sell downloadable items as visitors will not be able to download their products immediately after purchase.<br /><br />Enter full url starting http://</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Live/Test Payment URL</p>
+</div>
+
+<div class="blockWrapper">
+  <p>2Checkout`s processing url. At the time of these docs it is:<br /><br />
+  https://www.2checkout.com/checkout/purchase<br /><br />
+  This should not be changed unless altered by 2Checkout.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable 2Checkout</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enable / disable 2Checkout as payment option.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>2Checkout Test Mode &amp; Restrictions</p>
+</div>
+
+<div class="blockWrapper">
+  <p>To activate in Maian Cart, set the payment mode to 'Test' on the 'System > General Settings > Global Payment Settings' page. If it Test mode 2Checkout does not debit any credit cards. However, it also does NOT send any INS post data back to the website, so its
+  very difficult to test 2Checkout successfully in test mode. A live payment will probably be your best way of testing. An option to utilise the <a href="http://developers.2checkout.com/inss" onclick="window.open(this);return false">2Checkout INS simulator</a> may be built in at a later
+  date.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Passing Additional Payment Parameters</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart allows you to specify additional payment parameters besides the required system ones. This maybe useful if you need to pass a certain parameter to any gateway during
+  purchase. Some gateways have many parameters that enable/disable functions on the checkout page. To add addtional parameters for 2Checkout, enter array key => value pairs in the following file:<br /><br />
+  <b>classes/gateways/inclusions/2checkout.php</b>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Performing Additional Actions After Successful Payment</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart allows you to perform additional actions after a successful transaction. This is useful if you need to execute additional code after the payment has been accepted. Edit the following file:<br /><br />
+  <b>classes/gateways/triggers/2checkout.php</b><br /><br />
+  This is for advanced users.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Re-Transmitting INS Messages</p>
+</div>
+
+<div class="blockWrapper">
+  <p>2Checkout enables you to re-transmit the INS post to your website. This is useful if you website server suddenly goes down at the point of transmission and the sales data wasn`t updated
+  in the system. To re-send INS post transmissions, log into your 2Checkout account and select 'Notifications > Failed' from the top menu. You can also select 'Success' if 2Checkout sent the INS ok
+  but the website didn`t log anything.<br /><br />
+  <img class="gateimg" src="images/gateways/2co3.jpg" alt="" title="" /><br /><br />
+  Once your results appear, click the checkboxes and then 'Resend'.<br /><br />
+  <b>NOTE: The ORDER_CREATED status is the initial transmission, so this should be sent first, followed by 'FRAUD_STATUS_CHANGED'.</b>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

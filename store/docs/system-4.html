@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>Manage New Pages: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>Overview</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Easily lets you add additional pages to your store. Additional page links appear in the left hand menu. You may also simply specify an external website address.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Creating New Page</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Fill in the options provided to create your new page. Meta keywords and descriptions are for search engine purposes. The 'Text to Display' is the text that appears on your page.  
+  Use <a href="features-20.html">BB Code</a> for formatting, HTML is not allowed.<br /><br />
+  Pages can easily be disabled/enabled via the last option.<br /><br />
+  If you wish to have a simple external link, the value of the 'Text to Display' box would be a url starting http://.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Contact Page</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The contact page is a system page and cannot be deleted. It can however, be disabled if you wish. Use the edit icon.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Load Custom Template File</p>
+</div>
+
+<div class="blockWrapper">
+  <p>If you prefer, you can load a custom template file. If this option is utilised any data entered in the textarea will not be rendered. This feature can be useful if you want to create your own .php page and add your own PHP code.<br /><br />
+  To add a custom template do the following:<br /><br />
+  <b>1</b>: Create a new file and add it to the 'templates/customTemplates/' directory. Files <b>MUST</b> have a <b>.tpl.php</b> extension.<br />
+  <b>2</b>: On the 'System > Manage New Pages' page in admin, specify this template at the load template for a new or existing page. This will load instead of the default system template.<br />
+  <b>3</b>: Add any code you need to your new template file.<br /><br />
+  See also the'templates/customTemplates/README.txt' file. Note that this is <b>NOT</b> compatible with the contact page. To make changes to this edit the 'templates/contact-us.tpl.php' file directly.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Custom Template File - Load Category or Banner Rotator</p>
+</div>
+
+<div class="blockWrapper">
+  <p>You can load the homepage banner rotator in any custom template file or any category listing:<br /><br />
+  &lt;?php echo $this->BANNERS; ?&gt; = Load banners<br /><br />
+  To load a category, pass the 'category' query string into the system as follows:<br /><br />
+  &lt;?php<br />
+  $_GET['category'] = <b>9</b>; (This example is category 9)<br />
+  $_GET['filter']   = 'title-az'; // Any value in category drop down. View source code..<br />
+  echo $this->CATEGORY->buildCategoryProducts();<br />
+  echo $this->CATEGORY->pageNumbers();<br />
+  ?&gt;<br /><br />
+  To follow the systems formatting, you`ll also need to enclose the category in a predefined div.<br /><br />
+  See the notes in the 'templates/customTemplates/example.tpl.php' file for an example display. 
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Custom Template File - Load Special Offers</p>
+</div>
+
+<div class="blockWrapper">
+  <p>You can load the special offers page in any custom template file:<br /><br />
+  &lt;?php<br />
+  echo $this->CATEGORY->buildSpecialOfferProducts();<br />
+  ?&gt;<br /><br />
+  To follow the systems formatting, you`ll also need to enclose the category in a predefined div.<br /><br />
+  See the notes in the 'templates/customTemplates/example.tpl.php' file for an example display. 
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Custom Template File - Load New Ticker</p>
+</div>
+
+<div class="blockWrapper">
+  <p>You can enable the news ticker on any custom page, regardless of whether you are using a custom template or not. Open the 'control/defined.inc.php' file and find:<br /><br />
+  <b>define('NEWS_TICKER_DISPLAY_CUSTOM_PAGES', 0);</b><br /><br />
+  Enter ID numbers separated with comma. Look for the ID number in the url.<br /><br />
+  np/about-us/3/index.html = 3<br />
+  index.php?np=3           = 3<br /><br />
+  Example to show ticker on pages 3,5 &amp; 6<br />
+  define('NEWS_TICKER_DISPLAY_CUSTOM_PAGES', '3,5,6');<br /><br />
+  Set to 0 to disable on all custom pages.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>External Link</p>
+</div>
+
+<div class="blockWrapper">
+  <p>An external link simply points to another web page outside of the store. For this to function, set this to YES and enter a url starting http:// in the text box.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Link Target</p>
+</div>
+
+<div class="blockWrapper">
+  <p>When an external link is opened, should this open the link in the same window/tab or a new window/tab? Note that some browser settings may cause this to default to a certain option.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Link Placement</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Links can appear in 3 places. Left Menu, Footer Left or Footer Middle. You can of course edit the templates and place the links anywhere, but this is for advanced users only.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Set as Landing Page</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you want this page to be set as the new landing page? If yes, when a visitor clicks to go to the store homepage, this page displays instead.<br /><br />Only one page can be set as the landing page, so if a previous page was set, this will be unset. Leave as "no" to load default store homepage.<br /><br />Ignored if page is set as an external link. Note than landing pages won`t be shown as links in the left hand or footer menu.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Show/Hide Left Column</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Do you wish to hide the left hand column when this page displays? Note that if you choose to have the link in the left hand menu only and choose to hide the left column, the link will NOT be visible.<br /><br /><b>Note</b>: Column cannot be hidden for system contact page.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Page</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enable/Disable page.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Drag and Drop to Order</p>
+</div>
+
+<div class="blockWrapper">
+  <p>To set the order of the display links, drag and drop the rows after creating pages. A <span style="text-decoration:underline;cursor:move">move</span> icon appears if you hover your cursor over the rows. Simply drag and drop to re-order.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Quick Enable / Disable</p>
+</div>
+
+<div class="blockWrapper">
+  <p>To quickly enable or disable pages use the green / red flags.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Auto Line Breaks</p>
+</div>
+
+<div class="blockWrapper">
+  <p>By default carriage returns in the text box will be auto converted to HTML line breaks (&lt;br /&gt;). If you prefer not to have this option as default, edit the following file:
+  <span class="infoBlock">
+    <span class="li">
+    <span class="highlight">
+    control/defined.inc.php
+    </span>
+    </span>
+  </span> 
+  Update the following:
+  <span class="infoBlock">
+    <span class="li">
+    <span class="highlight">
+    define('AUTO_PARSE_LINE_BREAKS', 0);
+    </span>
+    </span>
+  </span> 
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

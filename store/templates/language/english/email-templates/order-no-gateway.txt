@@ -1,0 +1,43 @@
+{WEBSITE_NAME} - Order #{INVOICE_NO}
+--------------------------------------
+
+Hello {NAME},
+
+Thank you for your order at {WEBSITE_NAME}.
+
+ITEMS ORDERED:
+----------------------------------------------------------------
+
+{PRODUCT_ORDER}
+
+----------------------------------------------------------------
+Sub Total: {SUB_TOTAL}
+Shipping: {SHIP}
+Tax: {TAX}
+Insurance: {INSURANCE}
+Order Total: {TOTAL}
+
+Shipping Country: {SHIP_COUNTRY}
+Shipping Zone/Area: {SHIP_ZONE_AREA}
+Shipping Method: {SHIP_METHOD}
+
+Payment Currency: {CURRENCY}
+----------------------------------------------------------------
+
+You elected to pay using the following payment method:
+
+{METHOD}
+
+To complete your order, please follow these instructions:
+
+{INSTRUCTIONS}
+
+If you see any errors in your order, please contact us as soon as possible.
+
+Thank you,
+
+----------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}
+
+Your IP address(es) logged as: {ORDER_IP}

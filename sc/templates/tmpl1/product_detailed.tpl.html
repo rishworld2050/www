@@ -1,0 +1,181 @@
+{* product detailed information view *}
+
+{if $product_info ne NULL}
+
+<table cellpadding=3 border=0>
+<tr>
+
+{if $selected_category[3]}
+<td rowspan=2 valign=top>
+	<img src="products_pictures/{$selected_category[3]}" alt="{$selected_category[1]|replace:'"':'&quot;'}">
+</td>
+{/if}
+<td>
+	<b>
+	<a href="index.php" class="cat">{$smarty.const.LINK_TO_HOMEPAGE}</a> :
+	{section name=i loop=$product_category_path}
+	<a href="index.php?categoryID={$product_category_path[i][0]}" class="cat">{$product_category_path[i][1]}</a> :
+	{/section}</b>
+</td>
+</tr>
+</table>
+
+
+<p><table width=95% border=0 cellspacing=1 cellpadding=2>
+<tr>
+<td width=1% align=center valign=top>
+
+{if $product_info[5]}
+  {if $product_info[9]}
+	<a href="javascript:open_window('products_pictures/{$product_info[9]}',{$product_info[16]},{$product_info[17]});"><img border=0 src="products_pictures/{$product_info[5]}" alt="{$product_info[1]|replace:'"':'&quot;'}"><br>
+	<font class=average><nobr>{$smarty.const.ENLARGE_PICTURE}</nobr></font></a>
+  {else}
+	<img src="products_pictures/{$product_info[5]}" alt="{$product_info[1]|replace:'"':'&quot;'}">
+  {/if}
+{else}
+  {if $product_info[7]}
+    {if $product_info[9]}
+	  <a href="javascript:open_window('products_pictures/{$product_info[9]}',{$product_info[16]},{$product_info[17]});"><img border=0 src="products_pictures/{$product_info[7]}" alt="{$product_info[1]|replace:'"':'&quot;'}"><br>
+	  <font class=average><nobr>{$smarty.const.ENLARGE_PICTURE}</nobr></font></a>
+    {else}
+  	  <img src="products_pictures/{$product_info[7]}" alt="{$product_info[1]|replace:'"':'&quot;'}">
+    {/if}
+  {/if}
+{/if}
+
+</td>
+
+<td valign=top width=99%>
+
+ <table width=100% border=0 cellpadding=4>
+
+ <tr>
+ <td valign=top>
+
+  <table border=0>
+  <tr>
+  <td>
+
+
+  <h1>{$product_info[1]}</h1>
+
+
+  {if $product_info[8] > 0} {* rating *}
+
+	{section name=i loop=5}{if $smarty.section.i.index<$product_info[3]}<img src="images/redstar_big.gif">{else}<img src="images/blackstar_big.gif">{/if}{/section}
+	({$product_info[8]} {$smarty.const.VOTES_FOR_ITEM_STRING})
+
+
+  {/if}
+
+	</td>
+
+  </td>
+  </tr>
+  </table>
+  <br>
+
+ </td>
+ <td align=right valign=top> {* add to cart *}
+
+	{if $smarty.const.CONF_SHOW_ADD2CART eq 1}
+	 {if $product_info[6] > 0 && $product_info[4] > 0}
+			<a href="index.php?shopping_cart=yes&add2cart={$product_info[11]}"><img src="images/cart_big_navy.gif" border=0 alt="{$smarty.const.ADD_TO_CART_STRING}"></a>
+	 {else}&nbsp;
+	 {/if}
+	{/if}
+
+ </td>
+ </tr>
+
+ <tr>
+ <td colspan="2">
+
+  {if $product_info[4] > 0}
+	{* show list price? *}
+	{if $product_info[10] > 0 && $product_info[10] > $product_info[4] && $product_info[4] > 0} 
+		{$smarty.const.LIST_PRICE}: <font color=brown><strike>{$product_info[13]}</strike></font><br>
+	{/if}
+
+	<b>{$smarty.const.CURRENT_PRICE}: <font class="cat" color="red" >{$product_info[12]}</font></b>
+
+	{* you save *}
+	{if $product_info[10] > 0 && $product_info[10] > $product_info[4] && $product_info[4] > 0} 
+		<br>
+		{$smarty.const.YOU_SAVE}:
+		<font color=brown>{$product_info[14]} ({$product_info[15]}%)
+		</font><br>
+	{/if}
+  {/if}
+
+
+ </td>
+ </tr>
+
+ <tr>
+ <td colspan=2>
+ 
+		{* product code *}
+		{if $product_info.product_code ne ""}
+		{$smarty.const.ADMIN_PRODUCT_CODE}: <b>
+		{$product_info.product_code}
+		</b>
+		{/if}
+
+		{* in stock info *}
+		<br><br>
+		{$smarty.const.IN_STOCK}: <b>
+		{if $product_info[6] > 0}{$smarty.const.ANSWER_YES}{else}<font color=red>{$smarty.const.ANSWER_NO}</font>{/if}
+		</b>
+
+ </td>
+ </tr>
+
+</table>
+
+</td>
+
+</tr>
+<tr>
+	<td colspan=2>
+
+		<table border=0>
+
+
+<tr>
+
+<td width=99% valign=top>
+<br><br>
+<p>{$product_info[2]}
+</td>
+
+<td width=1% valign=top align=right>
+
+<center>
+<form action="index.php" method=get>
+
+<table border=0 cellspacing=1 cellpadding=2 bgcolor=#{$smarty.const.CONF_MIDDLE_COLOR}>
+ <tr><td align="center" class="menu">{$smarty.const.VOTING_FOR_ITEM_TITLE}</td></tr>
+ <tr bgcolor="white"><td>
+ <input type="radio" name="mark" value="5" checked>{$smarty.const.MARK_EXCELLENT}<br>
+ <input type="radio" name="mark" value="3.8">{$smarty.const.MARK_GOOD}<br>
+ <input type="radio" name="mark" value="2.5">{$smarty.const.MARK_AVERAGE}<br>
+ <input type="radio" name="mark" value="1">{$smarty.const.MARK_POOR}<br>
+ <input type="radio" name="mark" value="0.1">{$smarty.const.MARK_PUNY}
+ </td></tr>
+</table><br>
+
+<input type="hidden" name="productID" value="{$product_info[11]}">
+<input type="hidden" name="vote" value="yes">
+<input type="submit" class="redbutton" value="{$smarty.const.VOTE_BUTTON}">
+
+</form>
+</center>
+
+		</table>
+
+	</td>
+</tr>
+</table>
+
+{/if}

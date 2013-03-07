@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>Paypal: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>What is Paypal?</p>
+</div>
+
+<div class="blockWrapper">
+  <p><a href="http://www.paypal.com" onclick="window.open(this);return false">PayPal</a> allows any business or consumer with an email address to securely, conveniently and cost-effectively send and receive payments online.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>IPN: Instant Payment Notification System</p>
+</div>
+
+<div class="blockWrapper">
+  <p><a href="https://www.paypal.com/ipn" onclick="window.open(this);return false">Instant Payment Notification</a> (IPN) is PayPal's message service that sends a notification when a transaction is affected. Once IPN is integrated, sellers can automate their back office so they don't have to wait for payments to come in to trigger order fulfillment. </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable IPN</p>
+</div>
+
+<div class="blockWrapper">
+  <p>1. Log into your paypal and select 'Profile' from the top menu;<br /><br />
+  <img class="gateimg" src="images/gateways/paypal1.jpg" alt="" title="" /><br /><br />
+  2. From the options, select 'My Selling Preferences'.<br /><br />
+  <img class="gateimg" src="images/gateways/paypal2.jpg" alt="" title="" /><br /><br />
+  3. When the screen loads, select 'Instant Payment Notifications'.<br /><br />
+  <img class="gateimg" src="images/gateways/paypal3.jpg" alt="" title="" /><br /><br />
+  4. Click to 'Edit Settings' and enter the url to the 'checkout-paypal.php' file in your cart root. This should be done ONLY if no url currently exists. Example:<br /><br />
+  <b>http://www.yoursite.com/cart/checkout-paypal.php</b> (Replacing the domain/path with your own correct path)<br /><br />
+  <img class="gateimg" src="images/gateways/paypal4.jpg" alt="" title="" /><br /><br />
+  Make sure the radio button to 'Receive IPN Messages' is selected and click 'Save'. Note that if you already have an IPN url specified for another system, this does not need changing. This should
+  be all you need to activate IPN for your website. Note that you must have a premier or business account for this to function correctly.<br /><br />
+  Paypal is now ready to go.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Paypal as Payment Option in Maian Cart</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Select 'Catalogue > Payment Methods'. Click the <img src="images/configuration.png" style="vertical-align:bottom" alt="" title="" /> icon and launch the Paypal configuration window. Complete the options shown
+  to activate Paypal. More info as follows:</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Business/Premier/Sandbox E-Mail Address</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is your business, premier or sandbox email account.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Paypal Page Style</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Paypal lets you create a page style. If you have one that you wish to load for cart payments, specify its name here. Page styles are created in your Paypal account area. If unsure, leave blank.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Information About this Payment Method</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is presented to visitors if they click for more info on the gateway on the checkout page. Optional. Use <a href="features-20.html">BB Code</a> for formatting, HTML is not allowed.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Alternative Redirect Url (Optional)</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Alternative redirect url is the page a visitor will be directed to after a successful transaction. You should NOT use this option if you sell downloadable items as visitors will not be able to download their products immediately after purchase.<br /><br />Enter full url starting http://</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Live Payment URL</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Paypal`s live payment url. At the time of these docs it is:<br /><br />
+  https://www.paypal.com/cgi-bin/webscr?<br /><br />
+  The ? is important. This should not be changed unless altered by Paypal.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Sandbox Payment URL</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Paypal`s sandbox payment url. At the time of these docs it is:<br /><br />
+  https://www.sandbox.paypal.com/cgi-bin/webscr?<br /><br />
+  The ? is important. This should not be changed unless altered by Paypal.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Paypal Locale</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Set Paypal Locale below if required. This may be required if you want to force a language display when users switch to Paypal to pay. Example:<br /><br /><b>EN</b> = English.<br /><br />Refer to Paypal for correct locale codes. This is optional.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable Paypal IPN</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enable / disable Paypal as payment option.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Paypal Sandbox</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Paypal has a sandbox system for testing. This enables you to test the payment system without taking live payments. For this you need to have a Sandbox account. This is free to web developers and can be found here:<br /><br />
+  <a href="https://developer.paypal.com" onclick="window.open(this);return false">https://developer.paypal.com</a><br /><br />There are support forums for you to get help with the IPN system if you are experiencing problems. Once you have a Sandbox account set up you can enable this to test the script out.<br /><br />
+  To activate in Maian Cart, set the payment mode to 'Test' on the 'System > General Settings > Global Payment Settings' page.<br /><br />
+  <b>NOTE: Sandbox mode can be temperamental at the best of times. Sometimes it works, sometimes it doesn`t.</b><br /><br />If the Sandbox mode isn`t working, try a live payment. You can have 2 Paypal accounts, one Personal and one Business. For testing you
+  can then send money between the two accounts. 
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Passing Additional Payment Parameters</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart allows you to specify additional payment parameters besides the required system ones. This maybe useful if you need to pass a certain parameter to any gateway during
+  purchase. Some gateways have many parameters that enable/disable functions on the checkout page. To add addtional parameters for Paypal, enter array key => value pairs in the following file:<br /><br />
+  <b>classes/gateways/inclusions/paypal.php</b>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Performing Additional Actions After Successful Payment</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart allows you to perform additional actions after a successful transaction. This is useful if you need to execute additional code after the payment has been accepted. Edit the following file:<br /><br />
+  <b>classes/gateways/triggers/paypal.php</b><br /><br />
+  This is for advanced users.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Paypal Sales Tax</p>
+</div>
+
+<div class="blockWrapper">
+  <p>DO NOT configure Paypal for sales tax or else your payments will fail. You should always set up the tax options in the store.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>eCheck/eCheque Payments</p>
+</div>
+
+<div class="blockWrapper">
+  <p>An eCheck is a payment that a buyer makes directly from their bank account.<br /><br />
+  Just like a regular check/cheque, it usually takes between 3 and 5 business days for an eCheck to clear and the money to appear in your PayPal account.<br /><br />
+  Both eChecks and Instant Transfers are ways for a buyer to pay with their bank account. With an eCheck, the recipient receives the money in a few days. With an Instant Transfer, the recipient receives the money right away.<br /><br />
+  If a buyer uses an eCheck for payment in Maian Cart, the payment is automatically marked as pending because the funds won`t be in your Paypal account. If you wish to treat eCheck
+  payments the same as standard payments, set the 'Process Pending Payments as Completed' in your settings to 'yes' on the 'General Settings > Global Payment Options' page.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Re-Transmitting IPN Messages</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Paypal enables you to re-transmit the IPN post to your website. This is useful if you website server suddenly goes down at the point of transmission and the sales data wasn`t updated
+  in the system. To re-send IPN post transmissions, log into your Paypal account and select 'History > IPN History' from the top menu. Then select a date range.<br /><br />
+  <img class="gateimg" src="images/gateways/paypal5.jpg" alt="" title="" /><br /><br />
+  Once your search results appear, click the 'MessageID' link to view IPN info. Use the checkboxes to re-send.<br /><br />
+  <img class="gateimg" src="images/gateways/paypal6.jpg" alt="" title="" />
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

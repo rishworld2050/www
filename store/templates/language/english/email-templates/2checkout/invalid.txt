@@ -1,0 +1,21 @@
+Hello,
+
+A transaction has occured from your store that should be investigated.
+
+This means that the system could not create a valid match for the transaction based on the variables returned from 2Checkout.
+
+For more information check the following log file:
+{LOG_FILE}
+
+or log into your 2Checkout account for more information:
+http://www.2checkout.com
+
+If you are testing, it may be that your 2Checkout settings or cart setup isn`t configured correctly. Check your setup. 
+
+If you are in test mode, try a live payment to rule out the test server isn`t returning an invalid response.
+
+Kind regards,
+
+------------------------------------
+{WEBSITE_NAME}
+{WEBSITE_URL}

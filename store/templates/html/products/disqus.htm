@@ -1,0 +1,30 @@
+      <div class="disqusWrapper">
+        
+        <h2>
+         <span>{tags_text}:</span>
+        </h2>
+        
+        <div class="text">
+         <div id="disqus_thread"></div>
+         <script type="text/javascript">
+          //<![CDATA[
+          var disqus_shortname = '{short_name}';
+          var disqus_developer = {dev_mode};
+          var disqus_identifier = 'cart_code_{id}';
+          var disqus_url = '{url}';
+
+          (function() {
+           var dsq = document.createElement('script'); 
+           dsq.type = 'text/javascript'; 
+           dsq.async = true;
+           dsq.src = 'http://'+disqus_shortname+'.disqus.com/embed.js';
+           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+           //]]>
+         </script>
+         <p><a href="http://disqus.com" class="dsq-brlink" title="{text}: Disqus">{text}: <span class="logo-disqus">Disqus</span></a></p>
+        </div>
+        
+        <p class="bottom"></p>
+      </div>
+  

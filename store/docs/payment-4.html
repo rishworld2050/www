@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" />
+<title>AlertPay: Maian Cart v2.0 Documentation</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="SHORTCUT ICON" href="favicon.ico" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/menu.js">
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script>
+<link rel="stylesheet" href="menu.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="topwrapper">
+
+<div id="header">
+  
+  <div class="left">
+   <p class="doclinks">DOCUMENTATION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    <a href="https://www.facebook.com/pages/Maian-Script-World/272016296142119" onclick="window.open(this);return false"><img src="images/facebook.png" alt="Maian Script World on Facebook" title="Maian Script World on Facebook" /></a>
+    <a href="https://twitter.com/#!/maianscripts" onclick="window.open(this);return false"><img src="images/twitter.png" alt="Maian Script World on Twitter" title="Maian Script World on Twitter" /></a>
+    <a href="http://www.youtube.com/user/maianscripts" onclick="window.open(this);return false"><img src="images/youtube.png" alt="Maian Script World on YouTube" title="Maian Script World on YouTube" /></a>
+    <a href="http://www.maiancart.com/rss.html" onclick="window.open(this);return false"><img src="images/rssfeeds.png" alt="Maian Cart Updates" title="Maian Cart Updates" /></a>
+   </p>
+  </div>
+  
+  <div class="right">
+   <p>
+    <a class="home" href="index.html" title="Home">Home</a> 
+    <a class="bug" href="bug.html" title="Report a Bug">Report a Bug</a> 
+    <a class="free" href="http://www.maianscriptworld.co.uk" title="Other Free Scripts">Other Free Scripts</a> 
+    <a class="support" href="other-2.html" title="Support Options">Support Options</a>
+   </p>
+  </div>
+  
+  <br class="clear" />
+   
+</div>
+
+<div id="logo">
+
+  <div class="left">
+    <p><a href="index.html"><img src="images/logo.gif" alt="Maian Cart v2.0 Documentation" title="Maian Cart v2.0 Documentation" /></a></p>
+  </div>
+  
+  <div class="right">
+    <p>- FREE Upgrades for life.<br />
+    - All features unlocked and unlimited.
+    <span style="text-align:right;display:block;margin:11px 0 0 0"><a style="font-size:20px;background:url(images/buy.gif) no-repeat left center;padding:0 0 0 30px" href="http://www.maiancart.com/purchase.html" title="Buy Now" onclick="window.open(this);return false">BUY NOW</a></span>
+    </p>
+  </div>
+  
+  <br class="clear" />
+</div>
+
+</div>
+
+
+<div id="wrapper">
+
+<div id="menu">
+
+ <!-- Load Menu Links -->
+ <script type="text/javascript" src="js/menu_links.js"></script>
+
+ <br class="clear" />
+
+</div>
+
+<div id="content">
+
+<div class="fieldHeadWrapper">
+  <p>What is AlertPay?</p>
+</div>
+
+<div class="blockWrapper">
+  <p><a href="http://www.alertpay.com" onclick="window.open(this);return false">AlertPay</a> is a free to join internet payment service allowing you to send and receive money online. It is a Canadian based company that was established June 19, 2005. Its a comprehensive all-in-one solution for your payment needs. 
+  <a href="http://www.alertpay.com" onclick="window.open(this);return false">AlertPay</a> is an account-based payment processor allowing just about anyone with an email address to securely send and receive money with their credit card or bank account. </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>IPN: Instant Payment Notification</p>
+</div>
+
+<div class="blockWrapper">
+  <p><a href="https://dev.alertpay.com/index.php/integration-tools/html-integration/ipn-guide" onclick="window.open(this);return false">IPN</a> stands for Instant Payment Notification. It is a notification message that contains all the payment details data as well as your customer's information. IPN messages are sent when payments are made on your website through our checkout page or when you have successfully paid someone through AlertPay's MassPay API.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable AlertPay IPN</p>
+</div>
+
+<div class="blockWrapper">
+  <p>1. Sign up for an account at <a href="http://www.alertpay.com" onclick="window.open(this);return false">AlertPay</a> if you don`t already have one.<br /><br />
+  2. Log into your AlertPay account area and click 'Business Tools' from the menu:<br /><br />
+  <img class="gateimg" src="images/gateways/alert1.jpg" alt="" title="" /><br /><br />
+  3. Click on 'IPN Setup'. You`ll then be asked to enter your transaction PIN number:<br /><br />
+  <img class="gateimg" src="images/gateways/alert2.jpg" alt="" title="" /><br /><br />
+  4. When the IPN options load, you`ll see a screen like the following:<br /><br />
+  <img class="gateimg" src="images/gateways/alert3.jpg" alt="" title="" /><br /><br />
+  5. Into the 'Alert Url', enter the full url to the 'checkout-alertpay.php' file in your cart root. Example:<br /><br />
+  <b>http://www.yoursite.com/cart/checkout-alertpay.php</b> (Replacing the domain/path with your own correct path)<br /><br />
+  6. IPN Status should be 'Enabled'.<br /><br />
+  7. Enable 'Test' mode only if testing system.<br /><br />
+  8. Set a IPN Security Code.<br /><br />
+  9. DO NOT enable v2 IPN. Other options should also be ignored.<br /><br />
+  10. Click 'Update' to finish.<br /><br />
+  Alert Pay is now ready to go.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable AlertPay as Payment Option in Maian Cart</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Select 'Catalogue > Payment Methods'. Click the <img src="images/configuration.png" style="vertical-align:bottom" alt="" title="" /> icon and launch the AlertPay configuration window. Complete the options shown
+  to activate AlertPay. More info as follows:</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Merchant E-Mail Address</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Your AlertPay merchant e-mail address for payments.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>IPN Security Code</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enter security code as seen on IPN setup page in your AertPay account area.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Information About this Payment Method</p>
+</div>
+
+<div class="blockWrapper">
+  <p>This is presented to visitors if they click for more info on the gateway on the checkout page. Optional. Use <a href="features-20.html">BB Code</a> for formatting, HTML is not allowed.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Alternative Redirect Url (Optional)</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Alternative redirect url is the page a visitor will be directed to after a successful transaction. You should NOT use this option if you sell downloadable items as visitors will not be able to download their products immediately after purchase.<br /><br />Enter full url starting http://</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Live/Test Payment URL</p>
+</div>
+
+<div class="blockWrapper">
+  <p>AlertPay`s processing url. At the time of these docs it is:<br /><br />
+  https://www.alertpay.com/PayProcess.aspx<br /><br />
+  This should not be changed unless altered by AlertPay.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Enable AlertPay</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Enable / disable AlertPay as payment option.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>AlertPay Test Mode</p>
+</div>
+
+<div class="blockWrapper">
+  <p>To activate in Maian Cart, set your account IPN mode to test in your AlertPay account area. AlertPay no longer supports activating this from third party software, it MUST be done via your account area.</p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Passing Additional Payment Parameters</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart allows you to specify additional payment parameters besides the required system ones. This maybe useful if you need to pass a certain parameter to any gateway during
+  purchase. Some gateways have many parameters that enable/disable functions on the checkout page. To add addtional parameters for AlertPay, enter array key => value pairs in the following file:<br /><br />
+  <b>classes/gateways/inclusions/alertpay.php</b>
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Performing Additional Actions After Successful Payment</p>
+</div>
+
+<div class="blockWrapper">
+  <p>Maian Cart allows you to perform additional actions after a successful transaction. This is useful if you need to execute additional code after the payment has been accepted. Edit the following file:<br /><br />
+  <b>classes/gateways/triggers/alertpay.php</b><br /><br />
+  This is for advanced users.
+  </p>
+</div>
+
+<div class="fieldHeadWrapper">
+  <p>Help Tips</p>
+</div>
+
+<div class="blockWrapper">
+  <p>The same or additional information may be provided by hovering your cursor over the <img class="help_img" src="images/help.png" alt="" title="" /> image next to each heading in the admin area if applicable.</p>
+</div>
+
+</div>
+
+<div id="footer">
+  <p><a href="http://www.maiancart.com" title="Maian Cart v2.0" onclick="window.open(this);return false">Maian Cart v2.0</a> &copy; 2006-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> <a href="http://www.maianscriptworld.co.uk" title="Maian Script World" onclick="window.open(this);return false">Maian Script World</a>. All Rights Reserved.</p>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+Newsletter
+
+Welcome to our newsletter,
+
+This is the latest news.
+
+To unsubscribe and receive no further mailings, click the following link:
+{unsubscribe}
