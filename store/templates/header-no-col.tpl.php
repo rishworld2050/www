@@ -35,11 +35,6 @@ echo $this->JAVASCRIPT;
 <?php
 // overDiv is required for personalisation hover text in basket menu..
 ?>
-<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
-
-<div id="topBar">
-
-  <div class="inner">
    <p>
   
    <span class="basket">

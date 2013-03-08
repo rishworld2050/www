@@ -9,17 +9,18 @@
 */
 
 html,body {
+
   height: 100%;
-  margin: 0 0 1px 0;
-  padding: 0 0 1px 0;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
 body {
-  background:#fff;
+ background:black;
   padding:0;
   margin:0;
   font:13px arial,sans-serif;
-  color:#444;
-  margin-top:30px;
+  
+
 }
 div, h1, h2, h3, h4, p, form, label, input, textarea, 
 img, span, fieldset, legend, ul, li {
@@ -56,65 +57,6 @@ a:hover {
   color:#000;
 }
 
-/* Top Bar */
-#topBar {
-  background:#FBFCFE url(templates/images/bg.png);
-  border-bottom:5px solid #DDE2E2;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:3000;
-  color:#444;
-  font-size:12px;
-}
-#topBar a {
-  color:#444;
-  text-transform:uppercase;
-}
-#topBar .inner {
-  width: 950px;
-  margin:0 auto;
-}
-#topBar .rsstop {
-  background:url(templates/images/rss-small.png) no-repeat left center;
-  padding:1px 0 1px 25px;
-  margin-left:20px;
-}
-#topBar .store {
-  background:url(templates/images/store.png) no-repeat left center;
-  padding:1px 0 1px 25px;
-}
-#topBar .specials {
-  background:url(templates/images/specials.png) no-repeat left center;
-  padding:1px 0 1px 25px;
-  margin-left:20px;
-}
-#topBar .sitemap {
-  background:url(templates/images/sitemap.png) no-repeat left center;
-  padding:1px 0 1px 25px;
-  margin-left:20px;
-}
-#topBar p {
-  padding:10px 5px 10px 5px;
-}
-#topBar p .currencies {
-  font-size:12px;
-  margin-left:100px;
-}
-#topBar p .currencies select {
-  font-size:11px;
-  padding:1px;
-  border:1px solid #549182;
-}
-#topBar .basket {
-  float:right;
-  text-transform:uppercase;
-  margin-top:1px;
-  padding:1px 0 1px 25px;
-}
-
-/* Wrapper */
 
 #wrapper {
 	 width: 950px;
@@ -125,12 +67,20 @@ a:hover {
 	 clear: both;
 }
 
+
 /* Logo */
 
 #logoSearch {
-  height:100%;
-  margin:50px 0 10px 0;
+  
+  margin:0 0 0 0;
 }
+#logosearch .basket {
+  float:right;
+  text-transform:uppercase;
+  margin-top:0;
+  padding:0 0 0 0px;
+  }
+
 #logoSearch .left {
   float:left;
   width:550px;
@@ -147,7 +97,7 @@ a:hover {
   padding:20px 0 26px 0;
 }
 #logoSearch .right .search {
-  background:#fff url(templates/images/search-bg.gif) no-repeat top center;
+  /*background:#fff url(templates/images/search-bg.gif) no-repeat top center;*/
   margin:19px 0 0 0;
   width:390px;
   height:90px;
@@ -156,7 +106,7 @@ a:hover {
   padding:10px 2px 10px 10px;
 }
 #logoSearch .right .search p .text {
-  color:#2B9097;
+  color:red;
   display:block;
   font-size:12px;
   margin:0 0 3px 0;
@@ -166,7 +116,7 @@ a:hover {
 	 border: 1px solid #e4e4e4;
 	 border-left: 3px solid #e4e4e4;
 	 width: 80%;
-  color:#0E644E;
+  color:red;
 	 font: 13px arial, sans-serif;
 }
 #logoSearch .right .search p .links {
@@ -204,14 +154,14 @@ a:hover {
 #menu {
   border-top:1px solid #DDE2E2;
   border-bottom:1px solid #DDE2E2;
-  background:#fff;
+  background:black;
   color:#0E644E;
   text-align:right;
   font-size:12px;
-  margin-bottom:10px;
+
 }
 #menu p {
-  padding:7px 5px 7px 5px;
+  padding:0px 5px 7px 5px;
 }
 #menu p.nocur {
   padding-bottom:15px;
@@ -224,7 +174,7 @@ a:hover {
 #menu p select {
   font-size:12px;
   padding:1px;
-  color:#0E644E;
+  color:#;
   border:1px solid #D9DEDE;
 }
 
@@ -256,7 +206,7 @@ a:hover {
 }
 #shoppingBasket .basketItems .nothing {
   text-align:center;
-  color:#dc3747;
+  color:yellow;
   padding:15px 0 10px 0;
 }
 #shoppingBasket .checkout {
@@ -426,7 +376,7 @@ a:hover {
 }
 
 .leftMenu .menuBox {
-  background:url(templates/images/menu-box-top.gif) no-repeat top center;
+  background:/*url(templates/images/menu-box-top.gif) no-repeat top center*/red;
   width:215px;
   margin:0 0 20px 0;
 }
@@ -436,7 +386,7 @@ a:hover {
   border-bottom:1px solid #d6d6d6;
 }
 .leftMenu .menuBox .head span {
-  color:#444;
+  color:yellow;
   font-size:12px;
   text-transform:uppercase;
   display:block;
@@ -2808,7 +2758,7 @@ h1.prodDesc,h1.imageDesc {
   FOOTER
 */
 
-#footerBar {
+/*#footerBar {
   border-top:1px solid #e4e4e4;
   color:#444;
   font-size:11px;
@@ -2932,7 +2882,7 @@ h1.prodDesc,h1.imageDesc {
 .footerBasket a {
   font-size:11px;
   text-transform:uppercase;
-}
+}*/
 
 /* 
   OTHER 
