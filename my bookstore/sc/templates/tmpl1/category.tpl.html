@@ -1,0 +1,62 @@
+{* category view *}
+
+<p>
+
+<table cellpadding=3 border=0>
+<tr>
+
+{if $selected_category[3]}
+<td rowspan=2 valign=top>
+	<img src="products_pictures/{$selected_category[3]}" alt="{$selected_category[1]}">
+</td>
+{/if}
+<td>
+	<b>
+	<a href="index.php" class="cat">{$smarty.const.LINK_TO_HOMEPAGE}</a> :
+	{section name=i loop=$product_category_path}
+	<a class="cat" href="index.php?categoryID={$product_category_path[i][0]}">{$product_category_path[i][1]}</a> :
+	{/section}</b>
+</td>
+</tr>
+<tr>
+<td>
+	{* description *}
+	{$selected_category[2]}
+
+	<p>
+	{* show subcategories *}
+	{section name=i loop=$subcategories_to_be_shown}
+	 <a class=standard href="index.php?categoryID={$subcategories_to_be_shown[i][0]}">{$subcategories_to_be_shown[i][1]}</a>
+	 ({$subcategories_to_be_shown[i][2]})<br>
+	{/section}
+
+
+</td>
+</tr>
+
+</table>
+
+
+{if $products_to_show_count ne NULL}
+
+ {if $products_to_show_best_choice ne NULL}{$smarty.const.PRODUCTS_BEST_CHOISE}{/if}
+
+ <center>{$catalog_navigator}</center>
+
+ <table cellpadding=6 border=0 width=95%>
+  {section name=i1 loop=$products_to_show max=$products_to_show_count}
+	{if $smarty.section.i1.index is div by $smarty.const.CONF_COLUMNS_PER_PAGE}<tr>{/if}
+	<td valign=top width="{math equation="100 / x" x=$smarty.const.CONF_COLUMNS_PER_PAGE}%" format="%d">
+	{include file="product_brief.tpl.html" product_info=$products_to_show[i1]}
+	</td>
+	{if ($smarty.section.i1.index+1) is div by $smarty.const.CONF_COLUMNS_PER_PAGE}</tr>{/if}
+  {/section}
+ </table>
+
+ <center>{$catalog_navigator}</center>
+
+{else}
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;< {$smarty.const.STRING_EMPTY_CATEGORY} >
+
+{/if}

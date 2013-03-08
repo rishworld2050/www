@@ -1,0 +1,65 @@
+{* default admin page*}
+<div style="margin: 10px">
+
+<p>{$smarty.const.ADMIN_WELCOME}
+</p>
+
+{if $totals}
+
+<table border="0" style="border: 1px solid #CCC; background-color: #EEE" cellpadding="10">
+
+ <tr>
+
+	<td valign="top">
+
+		<table cellpadding="3">
+		<tr>
+		 <td><img src="images/backend/custord_new_orders_32.gif"></td>
+		 <td class="big"><b><u>Orders</u></b></td>
+		</tr>
+		<tr>
+		 <td>&nbsp;</td>
+		 <td>
+
+			<table style="margin-left: 5px;" cellpadding="0">
+			<tr><td>Today:</td><td>{$totals.orders_today} order(s) ({$totals.revenue_today})</td></tr>
+			<tr><td>Yesterday:</td><td>{$totals.orders_yesterday} order(s) ({$totals.revenue_yesterday})</td></tr>
+			<tr><td>This month:</td><td>{$totals.orders_thismonth} order(s) ({$totals.revenue_thismonth})</td></tr>
+			<tr><td>All time:</td><td>{$totals.orders} order(s) ({$totals.revenue})</td></tr>
+			</table>
+
+		 </td>
+		</tr>
+		</table>
+
+	</td>
+
+	<td valign="top">
+
+		<table cellpadding="3">
+		<tr>
+		 <td><img src="images/backend/catalog_products_categories_32.gif"></td>
+		 <td class="big"><b><u>Products</u></b></td>
+		</tr>
+		<tr>
+		 <td>&nbsp;</td>
+		 <td>
+
+			Total number of products: <b>{$totals.products}</b><br />
+			Products on sale (active): <b>{$totals.products_enabled}</b><br />
+			Product categories: <b>{$totals.categories}</b><br /><br />
+
+		 </td>
+		</tr>
+		</table>
+
+	</td>
+
+ </tr>
+
+</table>
+
+
+{/if}
+
+</div>

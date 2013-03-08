@@ -1,0 +1,98 @@
+{* appearence configurations template *}
+
+<p>
+{if $configuration_saved eq 1}
+{$smarty.const.ADMIN_UPDATE_SUCCESSFUL}
+{/if}
+
+
+<form action="admin.php" method=post>
+
+ <input type=hidden name=dpt value="conf">
+ <input type=hidden name=sub value="appearence">
+ <input type=hidden name=save_appearence value=1>
+
+ <table cellpadding=4>
+
+	<tr>
+	<td colspan=3 class="mainmenu_selected_{$current_dpt}">
+	<b>{$smarty.const.ADMIN_SETTINGS_APPEARENCE}</b>
+	</td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_MAX_PRODUCTS_COUNT_PER_PAGE}:</td>
+	<td width=10>&nbsp;</td>
+	<td><input type=text name=productscount value="{$smarty.const.CONF_PRODUCTS_PER_PAGE|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_MAX_COLUMNS_PER_PAGE}:</td>
+	<td width=10>&nbsp;</td>
+	<td><input type=text name=colscount value="{$smarty.const.CONF_COLUMNS_PER_PAGE|replace:'"':'&quot;'}"></td>
+	</tr>
+
+
+	<tr><td colspan=3 align=center><br>
+	{$smarty.const.ADMIN_MAIN_COLORS}
+	</td></tr>
+
+	<tr>
+	<td align=right>
+
+	<table><tr>
+	<td>
+	{$smarty.const.ADMIN_COLOR} 1:
+	</td>
+	</tr></table>
+
+	</td>
+	<td width=10><table bgcolor=black cellspacing=1><tr><td bgcolor=#{$smarty.const.CONF_DARK_COLOR}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table></td>
+	<td><b>#</b><input type=text name=darkcolor value="{$smarty.const.CONF_DARK_COLOR|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>
+
+	<table><tr>
+	<td>
+	{$smarty.const.ADMIN_COLOR} 2:
+	</td>
+	</tr></table>
+
+	</td>
+	<td width=10><table bgcolor=black cellspacing=1><tr><td bgcolor=#{$smarty.const.CONF_MIDDLE_COLOR}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table></td>
+	<td><b>#</b><input type=text name=middlecolor value="{$smarty.const.CONF_MIDDLE_COLOR|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>
+
+	<table><tr>
+	<td>
+	{$smarty.const.ADMIN_COLOR} 3:
+	</td>
+	</tr></table>
+
+	</td>
+	<td width=10><table bgcolor=black cellspacing=1><tr><td bgcolor=#{$smarty.const.CONF_LIGHT_COLOR}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table></td>
+	<td><b>#</b><input type=text name=lightcolor value="{$smarty.const.CONF_LIGHT_COLOR|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_SHOW_ADD2CART}:</td>
+	<td width=10>&nbsp;</td>
+	<td><input type=checkbox name=add2cart{if $smarty.const.CONF_SHOW_ADD2CART eq 1} checked{/if}></td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_SHOW_BESTCHOICE}:</td>
+	<td width=10>&nbsp;</td>
+	<td><input type=checkbox name=bestchoice{if $smarty.const.CONF_SHOW_BEST_CHOICE eq 1} checked{/if}></td>
+	</tr>
+
+ </table>
+
+ <input type=submit value="{$smarty.const.SAVE_BUTTON}">
+
+</form>

@@ -1,0 +1,24 @@
+{* order notification for customer *}
+{$smarty.const.EMAIL_HELLO}, {$order_custname}
+{$smarty.const.EMAIL_THANK_YOU_FOR_SHOPPING_AT} {$smarty.const.CONF_SHOP_NAME}!
+
+{$smarty.const.STRING_ORDER_ID}: {$order_id}
+
+{section name=i loop=$order_content}
+{if $order_content[i][4] ne ""}[{$order_content[i][4]}] {/if}{$order_content[i][1]} (x{$order_content[i][2]}): {$order_content[i][3]}
+{/section}
+
+{$smarty.const.TABLE_TOTAL} {$order_total}
+
+{$smarty.const.EMAIL_ORDER_WILL_BE_SHIPPED_TO}:
+{$order_shipping_address}
+
+{if $smarty.const.CONF_PAYPAL_INTEGRATION eq 1}
+If you prefer PayPal as a payment option, please make payment ({$order_total}) on the following email address:
+{$smarty.const.CONF_PAYPAL_EMAIL|replace:'"':'&quot;'}
+{/if}
+
+{$smarty.const.EMAIL_OUR_MANAGER_WILL_CONTACT_YOU}
+
+{$smarty.const.EMAIL_SINCERELY}, {$smarty.const.CONF_SHOP_NAME}
+{$smarty.const.CONF_SHOP_URL}

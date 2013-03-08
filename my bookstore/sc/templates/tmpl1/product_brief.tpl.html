@@ -1,0 +1,106 @@
+{* product brief view (from a category or search) *}
+
+{if $product_info ne NULL}
+
+
+<p><table width=95% border=0 cellspacing=1 cellpadding=2>
+<tr>
+<td width=1% align=center valign=top>
+
+{if $product_info[7]}
+	<a href="index.php?productID={$product_info[11]}">
+	 <img src="products_pictures/{$product_info[7]}" alt="{$product_info[1]|replace:'"':'&quot;'}" border=0><br>
+	 {$smarty.const.MORE_INFO_ON_PRODUCT}
+	</a>
+{else}
+  {if $product_info[5]}
+	<a href="index.php?productID={$product_info[11]}">
+	 <img src="products_pictures/{$product_info[5]}" alt="{$product_info[1]|replace:'"':'&quot;'}" border=0>
+	 {$smarty.const.MORE_INFO_ON_PRODUCT}
+	</a>
+  {/if}
+{/if}
+
+</td>
+
+<td valign=top width=99%>
+
+ <table width=100% border=0 cellpadding=2>
+
+ <tr>
+ <td valign=top>
+
+  <table border=0 cellpadding=0 cellspacing=0>
+  <tr>
+  <td>
+
+
+  <a class=cat href="index.php?productID={$product_info[11]}">{$product_info[1]}</a><br>
+
+
+  {if $product_info[8] > 0} {* rating *}
+
+	{section name=i loop=5}{if $smarty.section.i.index<$product_info[3]}<img src="images/redstar_big.gif">{else}<img src="images/blackstar_big.gif">{/if}{/section}
+
+
+  {/if}
+
+	</td>
+
+  </td>
+  </tr>
+  </table>
+
+ </td>
+ <td align=right valign=top> {* add to cart *}
+
+	{if $smarty.const.CONF_SHOW_ADD2CART eq 1}
+	 {if $product_info[6] > 0 && $product_info[4] > 0}
+			<a href="index.php?shopping_cart=yes&add2cart={$product_info[11]}"><img src="images/cart_navy.gif" border=0 alt="{$smarty.const.ADD_TO_CART_STRING}"></a>
+	 {else}&nbsp;
+	 {/if}
+	{/if}
+
+ </td>
+ </tr>
+
+ <tr>
+ <td colspan=2>
+
+  {if $product_info[4] > 0}
+	{* show list price? *}
+	{if $product_info[10] > 0 && $product_info[10] > $product_info[4] && $product_info[4] > 0} 
+		{$smarty.const.LIST_PRICE}: <font color=brown><strike>{$product_info[13]}</strike></font><br>
+	{/if}
+
+	<b>{$smarty.const.CURRENT_PRICE}: <font class="cat" color="red">{$product_info[12]}</font></b>
+
+	{* you save *}
+	{if $product_info[10] > 0 && $product_info[10] > $product_info[4] && $product_info[4] > 0} 
+		<br>
+		{$smarty.const.YOU_SAVE}:
+		<font color=brown>{$product_info[14]} ({$product_info[15]}%)
+		</font><br>
+	{/if}
+  {/if}
+
+ </td>
+ </tr>
+
+ <tr>
+ <td colspan=2>
+ 
+	{$product_info[2]}
+ </td>
+ </tr>
+
+</table>
+
+
+</td>
+
+</tr>
+
+</table>
+
+{/if}

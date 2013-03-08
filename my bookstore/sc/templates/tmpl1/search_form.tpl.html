@@ -1,0 +1,14 @@
+{* simple search form *}
+
+<table cellspacing=0 cellpadding=1 border=0>
+
+<form action="index.php" method=get>
+
+<tr>
+<td><input type="text" name="searchstring" size="15" style="color:{if $searchstring ne ""}black{else}#3E578F{/if};" value="{if $searchstring ne ""}{$searchstring|replace:'"':'&quot;'|replace:"\'":"'"|default:""}{else}{$smarty.const.STRING_SEARCH}{/if}" onclick="{if $searchstring ne ""}{else}this.value='';this.style.color='#000000';{/if}"></td>
+<td><nobr>&nbsp;<input type="image" border=0 src="images/search.gif">&nbsp;&nbsp;&nbsp;</nobr></td>
+</tr>
+
+</form>
+</table>
+

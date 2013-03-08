@@ -1,0 +1,165 @@
+{* main admin template*}
+<html>
+<head>
+
+<script>
+	function confirmDelete(id, ask, url) //confirm order delete
+	{literal}{{/literal}
+		temp = window.confirm(ask);
+		if (temp) //delete
+		{literal}{{/literal}
+			window.location=url+id;
+		}
+	}
+	function open_window(link,w,h)
+	{literal}{{/literal}
+		var win = "width="+w+",height="+h+",menubar=no,location=no,resizable=yes,scrollbars=yes";
+		newWin = window.open(link,'newWin',win);
+	}
+</script>
+
+<link rel=STYLESHEET href="images/backend/style-backend.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset={$smarty.const.DEFAULT_CHARSET}">
+<title>{$smarty.const.ADMIN_TITLE}</title>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" height="100%">
+
+<tr style="background: white url(images/backend/header_bg_downup.gif) repeat-x; background-position: bottom;height:1%;width:100%;text-align:center;">
+ <td width="70%" align="left" style="padding: 10px;">
+	<p>
+		<span class="headertext">{$smarty.const.ADMIN_TITLE|capitalize}</span>
+		(<a href="index.php">{$smarty.const.ADMIN_BACK_TO_SHOP|capitalize}</a>)
+	</p>
+ </td>
+ <td width="30%" align="right" valign="middle">
+
+	{if $totals ne ""}
+	 
+	 <small>
+	 <B>{$totals.products}</B> products in <B>{$totals.categories}</B> categories<br />
+	 <B>{$totals.orders}</B> orders so far<br />
+	 Total revenue: <B>{$totals.revenue}</B>
+	 </small>
+
+	{else}
+
+	 &nbsp;
+
+	{/if}
+ 
+ </td>
+</tr>
+
+<tr>
+
+	<td colspan="2">
+
+	  <div class="mainmenu_gradient">
+
+		<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+		  <TR>
+			{section name=i loop=$admin_departments}
+
+			 <TD>
+			 {if $admin_departments[i].id ne $current_dpt}
+				
+					<table cellpadding="4" border="0" style="margin-left: 5px; margin-right: 5px;">
+						<tr>
+							<td><a href="admin.php?dpt={$admin_departments[i].id}"><img src="images/backend/{$admin_departments[i].id}.gif" alt="{$admin_departments[i].name|replace:'"':'&quot;'}" width="32" height="32" border="0"></A></td>
+							<td><a href="admin.php?dpt={$admin_departments[i].id}" class="mainsection">{$admin_departments[i].name}</a></td>
+						</tr>
+					</table>
+
+			 {else}
+
+				<div class="mainmenu_selected_{$admin_departments[i].id}">
+					<table cellpadding="4" border="0" style="margin-left: 5px; margin-right: 13px;">
+						<tr>
+							<td><img src="images/backend/{$admin_departments[i].id}.gif" alt="{$admin_departments[i].name|replace:'"':'&quot;'}" width="32" height="32" border="0"></td>
+							<td><div class="menufont_core_light">{$admin_departments[i].name}</div></td>
+						</tr>
+					</table>
+				</div>
+			 {/if}
+			 </TD>
+
+			{/section}
+
+			</TD>
+		  </TR>
+		</TABLE>
+
+	  </div>
+
+	</td>
+
+</tr>
+
+{if $current_dpt && $current_dpt ne "custord"}
+
+<tr>
+ <td colspan="2">
+
+ <div class="mainmenu_selected_{$current_dpt}" style="text-align:left">
+
+	<table cellpadding="0" border="0" cellspacing="0" height="32">
+	 
+	 <tr>
+	 {section name=i loop=$admin_sub_departments}
+	   <td>
+	   {if $current_sub ne $admin_sub_departments[i].id}
+
+	    <div style="margin-right:10px;margin-left:5px">
+
+			<table>
+			<tr>
+			{if $current_dpt ne "reports"}{* do not show icons for REPORTS section *}<td><img src="images/backend/{$current_dpt}_{$admin_sub_departments[i].id}.gif" alt="{$admin_sub_departments[i].name}" width="24" height="24"></td>{/if}
+			<td><a href="admin.php?dpt={$current_dpt}&sub={$admin_sub_departments[i].id}" class="menufont_sub_light">{$admin_sub_departments[i].name}</a></td>
+			</tr>
+			</table>
+
+		 </div>
+	   {else}
+		 <div class="menufont_sub_light" style="margin:5px;margin-right:10px;padding:5px; background-color:black">{$admin_sub_departments[i].name}</div>
+	   {/if}
+	   </td>
+	 {/section}
+	 </tr>
+	 
+	</table>
+
+ </div>
+
+ </td>
+</tr>
+
+{/if}
+
+<tr>
+ <td colspan="2" height="100%" valign="top" style="background: white url(images/backend/header_bg_updown.gif) repeat-x; background-position: top; border-top:1px solid #999">
+
+	{section name=i loop=$admin_sub_departments}{if $current_sub eq $admin_sub_departments[i].id}
+	
+	<table style="margin:10px;" cellpadding="5">
+	 <tr>
+	  {if $current_dpt ne "reports"}{* do not show icons for REPORTS section *}<td><img src="images/backend/{$current_dpt}_{$current_sub}_32.gif" width="32" height="32" alt="{$admin_sub_departments[i].name|replace:'"':'&quot;'}"></td>{/if}
+	  <td class="big"><b>{$admin_sub_departments[i].name}</b></td>
+	 </tr>
+	</table>
+	
+	{/if}{/section}
+
+	{include file="$admin_main_content_template"}
+
+ </td>
+</tr>
+
+
+</table>
+
+</body>
+
+</html>

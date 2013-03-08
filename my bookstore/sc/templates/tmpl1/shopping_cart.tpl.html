@@ -1,0 +1,64 @@
+{* shopping cart *}
+
+<center>
+
+{if $cart_total ne ""}
+
+	<table width=75% border=0><tr><td><b>{$smarty.const.CART_TITLE}:</b></td>
+
+	<td align=right><a href="index.php?shopping_cart=yes&clear_cart=yes"><img src="images/button_delete.gif" border=0 > <u>{$smarty.const.CART_CLEAR}</u></a></td></table>
+
+
+
+	<form action="index.php" method=post>
+
+	<table width=75% border=0 cellspacing=0 cellpadding=5>
+
+	 <tr align="center" bgcolor="#{$smarty.const.CONF_MIDDLE_COLOR}">
+	 <td class="menu">{$smarty.const.TABLE_PRODUCT_NAME}</td>
+	 <td class="menu">{$smarty.const.TABLE_PRODUCT_QUANTITY}</td>
+	 <td class="menu">{$smarty.const.TABLE_PRODUCT_COST}</td>
+	 <td width=20></td>
+	 </tr>
+
+	 {section loop=$cart_content name=i}
+		<tr bgcolor=white>
+		 <td><a href="index.php?productID={$cart_content[i].id}">{if $cart_content[i].product_code ne ""}[{$cart_content[i].product_code}] {/if}{$cart_content[i].name}</a></td>
+		 <td align=center><input type="text" name="count_{$cart_content[i].id}" size=5 value="{$cart_content[i].quantity}"></td>
+		 <td align=center>{$cart_content[i].cost}</td>
+		 <td align=center><a href="index.php?shopping_cart=yes&remove={$cart_content[i].id}"><img src="images/button_delete.gif" border=0 alt="{$smarty.const.DELETE_BUTTON}"></a></td>
+		</tr>
+	 {/section}
+
+	 <tr bgcolor=white>
+	 <td><font class=cat><b>{$smarty.const.TABLE_TOTAL}</b></font></td>
+	 <td><br><br></td><td bgcolor=#{$smarty.const.CONF_LIGHT_COLOR} align=center><font class=cat><b>{$cart_total}</b></font></td>
+	 <td></td>
+	 </tr>
+	</table>
+
+	<input type=hidden name=update value=1>
+	<input type=hidden name=shopping_cart value=1>
+
+	<p>
+	<table width=75% border=0>
+	 <tr><td align=right><input type="submit" value="{$smarty.const.UPDATE_BUTTON}"></td></tr>
+	</table>
+	</form>
+
+	<form action="index.php" method=get>
+		<table width=75% border=0>
+		<tr>
+		 <td align=center><input type="button" value="{$smarty.const.STRING_BACK_TO_SHOPPING}" onClick="history.go(-1);"></td>
+		 <td align=center><input type="submit" value="{$smarty.const.CART_PROCEED_TO_CHECKOUT}" style="font-weight: bold; font-size: 120%;"></td>
+		</table>
+		<input type=hidden name=order_custinfo value=yes>
+	</form>
+
+{else}
+
+<p><font>{$smarty.const.CART_EMPTY}</font>
+
+{/if}
+
+</center>

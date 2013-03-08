@@ -1,0 +1,89 @@
+{* general configurations template *}
+
+<p>
+{if $configuration_saved eq 1}
+{$smarty.const.ADMIN_UPDATE_SUCCESSFUL}
+{/if}
+
+
+<form action="admin.php" method=post>
+
+ <input type=hidden name=dpt value="conf">
+ <input type=hidden name=sub value="general">
+ <input type=hidden name=save_general value=1>
+
+ <table cellpadding=4>
+
+	<tr>
+	<td colspan=2 class="mainmenu_selected_{$current_dpt}">
+	<b>{$smarty.const.ADMIN_SETTINGS}</b>
+	</td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_SHOP_NAME}:</td>
+	<td><input type=text name=shop_name value="{$smarty.const.CONF_SHOP_NAME|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_SHOP_URL}:</td>
+	<td><input type=text name=shop_url value="{$smarty.const.CONF_SHOP_URL|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_SHOP_EMAIL}:</td>
+	<td><input type=text name=general_email value="{$smarty.const.CONF_GENERAL_EMAIL|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_ORDERS_EMAIL}:</td>
+	<td><input type=text name=orders_email value="{$smarty.const.CONF_ORDERS_EMAIL|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td colspan=2 class="mainmenu_selected_{$current_dpt}">
+	<b>{$smarty.const.ADMIN_CURRENCY}</b>
+	</td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_CURRENCY_ID_LEFT}:</td>
+	<td><input type=text name=currency_id_left value="{$smarty.const.CONF_CURRENCY_ID_LEFT|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_CURRENCY_ID_RIGHT}:</td>
+	<td><input type=text name=currency_id_right value="{$smarty.const.CONF_CURRENCY_ID_RIGHT|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_CURRENCY_ISO3}:</td>
+	<td><input type=text name=currency_iso3 value="{$smarty.const.CONF_CURRENCY_ISO3|replace:'"':'&quot;'}"></td>
+	</tr>
+
+	<tr>
+	<td colspan=2 class="mainmenu_selected_{$current_dpt}">
+	<b>PayPal</b>
+	</td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_PAYPAL_INTEGRATION}:</td>
+	<td>
+		<select name=paypal_enabled>
+		 <option value="1"{if $smarty.const.CONF_PAYPAL_INTEGRATION eq 1} selected{/if}>{$smarty.const.ANSWER_YES}</option>
+		 <option value="0"{if $smarty.const.CONF_PAYPAL_INTEGRATION eq 0} selected{/if}>{$smarty.const.ANSWER_NO}</option>
+		</select>
+	</td>
+	</tr>
+
+	<tr>
+	<td align=right>{$smarty.const.ADMIN_PAYPAL_EMAIL}:</td>
+	<td><input type=text name=paypal_email value="{$smarty.const.CONF_PAYPAL_EMAIL|replace:'"':'&quot;'}"></td>
+	</tr>
+
+ </table>
+
+ <input type=submit value="{$smarty.const.SAVE_BUTTON}">
+
+</form>

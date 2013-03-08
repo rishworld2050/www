@@ -1,0 +1,60 @@
+{* front-end homepage*}
+
+{$smarty.const.STRING_GREETINGS}
+
+<h1 align="center">{$smarty.const.ADMIN_SPECIAL_OFFERS}</h1>
+
+
+{* special offers *}
+<p>
+<center>
+<table border=0 cellspacing=0 cellpadding=10>
+{section name=i loop=$special_offers}
+{if $smarty.section.i.index is div by 2}<tr>{/if}
+<td valign="top" align="center">
+
+
+ <a href="index.php?productID={$special_offers[i][0]}"><img src="products_pictures/{$special_offers[i][2]}" border="0" alt="{$special_offers[i][1]|replace:'"':'&quot;'}"></a><br />
+ <a href="index.php?productID={$special_offers[i][0]}">{$special_offers[i][1]}</a><br />
+   <font color=red><b>{$special_offers[i][3]}</b></font>
+
+</td>
+{if ($smarty.section.i.index+1) is div by 2}</tr>{/if}
+{/section}
+</table>
+</center>
+
+{* end of special offers *}
+
+
+<a name="catalog"><h1 align="center">{$smarty.const.ADMIN_CATALOG}</h1>
+
+<p>
+<table width=100% border=0 cellpadding=5>
+{section name=i loop=$root_categories}
+{if $smarty.section.i.index is div by 2}<tr>{/if}
+<td width=1% align=center>
+	{if $root_categories[i][3] ne ""}<a href="index.php?categoryID={$root_categories[i][0]}"><img border=0 src="products_pictures/{$root_categories[i][3]}" alt="{$root_categories[i][1]}">{/if}
+</td>
+<td>
+		<a href="index.php?categoryID={$root_categories[i][0]}" class=cat>{$root_categories[i][1]}</a> <b>[{$root_categories[i][2]}]</b>:<br>
+
+		{* show sub categories *}
+		{assign var="tmp" value=0}
+		{section name=j loop=$root_categories_subs}
+		  {if $root_categories_subs[j][3] == $root_categories[i][0]}
+		    
+			{if $tmp == 1}|
+			{else}
+				{assign var="tmp" value=1}
+			{/if}
+			
+			<a href="index.php?categoryID={$root_categories_subs[j][0]}" class=standard>{$root_categories_subs[j][1]}</a>
+		  {/if}
+		{/section}
+</td>
+
+</td>
+{if ($smarty.section.i.index+1) is div by 2}</tr>{/if}
+{/section}
+</table>

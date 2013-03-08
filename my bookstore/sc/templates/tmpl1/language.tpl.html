@@ -1,0 +1,14 @@
+{* language selection form *}
+
+{if $lang_list_count > 1}
+
+	{section name=i loop=$lang_list}
+	{if $smarty.section.i.index > 0}<font class="lightsmall">/</font> {/if}
+	<a class="lightsmall" href="javascript:document.lang_form.new_language.value={$smarty.section.i.index};document.lang_form.submit();">{$lang_list[i]->description}</a>
+	{/section}
+
+	<form name="lang_form" method="post" action="index.php">
+	<input type="hidden" name="new_language">
+	</form>
+
+{/if}

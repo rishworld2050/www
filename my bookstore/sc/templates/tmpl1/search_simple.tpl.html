@@ -1,0 +1,30 @@
+{* simple search *}
+
+{if $products_to_show_count > 0}
+<center>
+<p>{$smarty.const.STRING_FOUND} <b>{$products_found}</b> {$smarty.const.STRING_PRODUCTS}
+</center>
+<p>
+ {* show found positions *}
+
+ <center>{$search_navigator}</center>
+ <p>
+ <table cellpadding=6 border=0 width=95%>
+  {section name=i1 loop=$products_to_show max=$products_to_show_count}
+	{if $smarty.section.i1.index is div by $smarty.const.CONF_COLUMNS_PER_PAGE}<tr>{/if}
+	<td valign=top width="{math equation="100 / x" x=$smarty.const.CONF_COLUMNS_PER_PAGE format="%d"}%">
+	{include file="product_brief.tpl.html" product_info=$products_to_show[i1]}
+	</td>
+	{if ($smarty.section.i1.index+1) is div by $smarty.const.CONF_COLUMNS_PER_PAGE}</tr>{/if}
+  {/section}
+ </table>
+ <p>
+ <center>{$search_navigator}</center>
+
+{else}
+
+<center>
+<p>{$smarty.const.STRING_NO_MATCHES_FOUND}
+</center>
+
+{/if}

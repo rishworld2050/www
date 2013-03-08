@@ -1,0 +1,41 @@
+{* new orders list *}
+
+<p>{$smarty.const.ADMIN_ABOUT_PRICES}
+
+{if $new_order_count ne 0}
+
+<p>
+	<table width="100%" border="0" cellspacing="0" cellpadding="6">
+
+	<tr class="mainmenu_selected_{$current_dpt}">
+	 <td><b>{$smarty.const.STRING_ORDER_ID}</b></td>
+	 <td><b>{$smarty.const.TABLE_CUSTOMER}</b></td><td><b>{$smarty.const.CUSTOMER_EMAIL}</b></td> <td><b>{$smarty.const.CUSTOMER_ADDRESS}</b></td>
+	 <td><b>{$smarty.const.CUSTOMER_PHONE_NUMBER}</b></td><td><b>{$smarty.const.TABLE_ORDERED_PRODUCTS}</b></td>
+	 <td align=center><b>{$smarty.const.TABLE_ORDER_TOTAL}</b></td>
+	 <td><b>{$smarty.const.TABLE_ORDER_TIME}</b></td><td>&nbsp;</td>
+	</tr>
+
+	{section name=i loop=$orders}
+	<tr class="{if $smarty.section.i.index is div by 2}bg_white{else}bg_{$current_dpt}{/if}">
+		<td>{$orders[i][0]}</td>
+		{* print customer info: first name, e-mail, etc.*}
+		<td>{$orders[i][2]} {$orders[i][3]}</td>
+		<td><a href="mailto:{$orders[i][4]}">{$orders[i][4]}</a></td>
+		<td>{$orders[i][9]}<br>{$orders[i][8]} {$orders[i][7]} {$orders[i][6]}<br>{$orders[i][5]}</td>
+		<td>{$orders[i][10]}</td>
+		<td>{$orders[i][11]}</td>
+		<td align=center><b>{$orders[i][12]}</b></td>
+		<td>{$orders[i][1]}</td>
+		<td><a href="javascript:confirmDelete({$orders[i][0]},'{$smarty.const.QUESTION_DELETE_CONFIRMATION}','admin.php?dpt=custord&sub=new_orders&delete=');"><img src="images/backend/button_delete.gif" border=0 alt="{$smarty.const.CANCEL_BUTTON}"></a></td>
+	</tr>
+	{/section}
+
+	</table>
+	<input type=hidden name=dpt value=custord>
+	<input type=hidden name=sub value=new_orders>
+
+{else}
+
+	<p>{$smarty.const.STRING_NO_ORDERS}
+
+{/if}
