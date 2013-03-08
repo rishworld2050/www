@@ -1,0 +1,19 @@
+<script src='scripts/sfm-png-fix.js' type='text/javascript'></script>
+<script type='text/javascript'>
+// <![CDATA[
+sfm_fix_png("contact_sfm_confirm_img","images/spacer.gif");
+
+// ]]>
+</script>
+<script type='text/javascript'>
+// <![CDATA[
+sfm_fix_png("contact_sfm_confirm_edit_img","images/spacer.gif");
+
+// ]]>
+</script>
+<script type='text/javascript'>
+// <![CDATA[
+sfm_fix_png("contact_sfm_confirm_print_img","images/spacer.gif");
+
+// ]]>
+</script>

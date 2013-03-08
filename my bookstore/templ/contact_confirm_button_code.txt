@@ -1,0 +1,1 @@
+<input type='image' name='sfm_confirm' id='contact_sfm_confirm_img' src='images/contact-sfm_confirm-1.png' alt='submit'/>

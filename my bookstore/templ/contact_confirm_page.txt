@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+   <head >
+      <title >Hotels</title>
+      <meta content="text/html; charset=utf-8" http-equiv='Content-Type'/>
+      <link rel='stylesheet' type='text/css' href="style/templatemo_style.css"/>
+      <link rel='stylesheet' type='text/css' href="style/ddsmoothmenu.css"/>
+      <script type='text/javascript' src='js/jquery.min.js'></script>
+      <script type='text/javascript' src='js/ddsmoothmenu.js'></script>
+      <script type='text/javascript'>
+ddsmoothmenu.init({
+	mainmenuid: 'templatemo_menu', 
+	orientation: 'h', 
+	classname: 'ddsmoothmenu',
+	contentsource: 'markup' 
+})
+      </script>
+      <link rel='stylesheet' type='text/css' href="style/jquery.dualSlider.0.2.css" media='all'/>
+      <script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
+      <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+      <script type='text/javascript' src='js/jquery.timers-1.2.js'></script>
+      <link rel='stylesheet' type='text/css' href="style/slimbox2.css" media='screen'/>
+      <script type='text/JavaScript' src='js/slimbox2.js'></script>
+      <meta name='GENERATOR' content='MSHTML 10.00.9200.16494'/>
+   </head>
+   <body >
+      <div id='templatemo_header_wrapper'>
+         <div id='templatemo_header'>
+            <div id='site_title'></div>
+            <div id='templatemo_menu' class='ddsmoothmenu'>
+               <ul >
+                  <li >
+                     <a class='selected' href='index.php'>Home</a>
+                  </li>
+                  <li >
+                     <a href='about.php'>About</a>
+                  </li>
+                  <li >
+                     <a href='Hotels.php'>Hotels</a>
+                  </li>
+                  <li >
+                     <a href='contact.php'>Contact</a>
+                  </li>
+                  <li >
+                     <a href='login.php'>Login</a>
+                  </li>
+               </ul>
+               <br style='CLEAR: left'/>
+            </div>
+         </div>
+      </div>
+      <h2 >Please Confirm...</h2>
+      <div >
+Press the 'Confirmed' button to proceed with the submission.         <br />
+If you want 
+to make changes, press the 'Edit' button.
+      </div>
+      <div class='sfm_table_container'>
+         <table cellSpacing='0' cellPadding='5'>
+            <tbody >
+               <tr >
+                  <td class='FieldName'>user_name</td>
+                  <td class='FieldValue'>%user_name%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>email</td>
+                  <td class='FieldValue'>%email%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>password</td>
+                  <td class='FieldValue'>%password%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>subject</td>
+                  <td class='FieldValue'>%subject%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>ph_no</td>
+                  <td class='FieldValue'>%ph_no%</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <p ></p>
+      <div class='ButtonBox'>
+%_sfm_print_button_% %_sfm_edit_button_% 
+%_sfm_confirm_button_%
+      </div>
+   </body>
+</html>

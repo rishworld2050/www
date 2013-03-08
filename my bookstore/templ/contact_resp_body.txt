@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html >
+   <head >
+      <title ></title>
+      <meta content="text/html; charset=utf-8" http-equiv='Content-Type'/>
+      <style type='text/css'>body,td{font-family:Arial;font-size :12px;}</style>
+      <meta name='GENERATOR' content='MSHTML 10.00.9200.16494'/>
+   </head>
+   <body style='BACKGROUND-COLOR: transparent'>
+      <div class='sfm_table_container'>You have registered at bookstore.com .</div>
+      <div class='sfm_table_container'>
+You have Provided following Information to us.
+      </div>
+      <div class='sfm_table_container'>
+Check them and come to us in case of any 
+disperancy.
+      </div>
+      <div class='sfm_table_container'>&nbsp;</div>
+      <div class='sfm_table_container'>
+         <table cellSpacing='0' cellPadding='5'>
+            <tbody >
+               <tr >
+                  <td class='FieldName'>
+                     <div >user_name</div>
+                  </td>
+                  <td class='FieldValue'>%user_name%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>email</td>
+                  <td class='FieldValue'>%email%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>password</td>
+                  <td class='FieldValue'>%password%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>cpassword</td>
+                  <td class='FieldValue'>%cpassword%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>ph_no</td>
+                  <td class='FieldValue'>%ph_no%</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <p ></p>
+   </body>
+</html>

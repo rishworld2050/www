@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+   <head >
+      <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+      <title >Form Admin Page: contact</title>
+      <link rel='stylesheet' type='text/css' href='style/jquery-ui-1.8.16.css'/>
+      <link rel='stylesheet' type='text/css' href='style/flexigrid.css'/>
+      <link rel='stylesheet' type='text/css' href='style/jquery.multiselect.css'/>
+      <link rel='stylesheet' type='text/css' href='style/adminpage.css'/>
+      <script src='scripts/jquery-1.7.2.min.js' type='text/javascript'></script>
+      <script src='scripts/jquery-ui-1.8.18.custom.min.js' type='text/javascript'></script>
+      <script src='scripts/flexigrid.js' type='text/javascript'></script>
+      <script src='scripts/jquery.sim.utils.js' type='text/javascript'></script>
+      <script src='scripts/jquery.multiselect.js' type='text/javascript'></script>
+      <script src='scripts/jquery.sim.flexgridSave.js' type='text/javascript'></script>
+      <script src='scripts/jquery.sim.SubmissionTable.js' type='text/javascript'></script>
+      <script type='text/javascript'>
+// <![CDATA[
+
+$(function()
+{
+if($.browser.msie && parseInt($.browser.version, 10) <= 7) 	{$('<div id="errorbox">Please use the <a href="http://windows.microsoft.com/en-us/internet-explorer/products/ie/home">latest version of Internet Explorer</a></div>').appendTo('#topbar');}
+
+$('table#contact_report').submissionTable({url:'?sfm_adminpage=recs',fieldsel:'contact_report_fld_sel'});
+
+$('#contact_report_fld_sel').multiselect();
+});
+
+// ]]>
+      </script>
+   </head>
+   <body >
+      <div id='topbar'>
+         <div id='infobar'>
+Admin page for form contact |             <a href='?sfm_adminpage=disp&sfm_logout=yes'>Logout</a>
+         </div>
+      </div>
+      <h2 >Form Submissions</h2>
+      <table id='contact_report'>
+         <tr >
+            <td ></td>
+         </tr>
+      </table>
+      <div class='fld_sel_container'>
+         <span >Fields to Display:</span>
+         <select id='contact_report_fld_sel' multiple='multiple'></select>
+      </div>
+      <div id='db_download_container'>
+         <form id='dbdownload' action='?sfm_adminpage=db-csv' method='post'></form>
+         <a href='#' onclick='document.forms[&#039;dbdownload&#039;].submit()'>Export to CSV</a>
+      </div>
+   </body>
+</html>

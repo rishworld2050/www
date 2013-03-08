@@ -1,0 +1,1 @@
+<a id='sfm_confirm_print' href='javascript:window.print();' class='sfm_print_button'><img id='contact_sfm_confirm_print_img' src='images/contact-sfm_confirm_print-1.png' alt='Print' border='0'/></a>

@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html >
+   <head >
+      <title ></title>
+      <meta content="text/html; charset=utf-8" http-equiv='Content-Type'/>
+      <style type='text/css'>
+body
+{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10pt;
+}
+
+.sfm_table_container
+{
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.sfm_table_container td
+{
+    font-size : 10pt;
+	text-align: left;
+	border-bottom:1px solid #DEDEDE;
+	padding:5px;
+}
+
+.sfm_table_container td.FieldName
+{
+	font-weight:bold;
+	vertical-align: top;
+}
+
+.sfm_table_container td.FieldValue 
+{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10pt;
+}
+
+.sfm_table_container td.ExtraInfoName 
+{
+	font-family : Verdana, Helvetica, sans-serif;
+	font-size : 8pt;
+	border-bottom:0px;
+	font-weight:bold;
+}
+
+.sfm_table_container td.ExtraInfoValue 
+{
+	font-family : Verdana, Helvetica, sans-serif;
+	font-size : 8pt;
+	border-bottom:0px;
+}
+
+
+fieldset {
+	display:block; 
+	border-color: #ddddFF;
+        border-width: 1px 0 0 0;
+        border-style: solid none none none;
+	padding:5px; 
+	font-family:verdana, sans-serif; 
+	margin-bottom:0.5em; 
+}
+      </style>
+      <meta name='GENERATOR' content='MSHTML 10.00.9200.16494'/>
+   </head>
+   <body style='BACKGROUND-COLOR: transparent'>
+The following data was submitted in 
+the form named contact by a visitor 
+      <div class='sfm_table_container'>
+         <table cellSpacing='0' cellPadding='5'>
+            <tbody >
+               <tr >
+                  <td class='FieldName'>name</td>
+                  <td class='FieldValue'>%name%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>email</td>
+                  <td class='FieldValue'>%email%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>address</td>
+                  <td class='FieldValue'>%address%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>ph_no</td>
+                  <td class='FieldValue'>%ph_no%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>feedback</td>
+                  <td class='FieldValue'>%feedback%</td>
+               </tr>
+            </tbody>
+         </table>
+         <h4 >More Info:</h4>
+         <table cellSpacing='0' cellPadding='5'>
+            <tbody >
+               <tr >
+                  <td class='FieldName'>FormSubmissionTime</td>
+                  <td class='FieldValue'>%_sfm_form_submision_time_%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>VisitorsIP</td>
+                  <td class='FieldValue'>%_sfm_visitor_ip_%</td>
+               </tr>
+               <tr >
+                  <td class='FieldName'>UniqueID</td>
+                  <td class='FieldValue'>%_sfm_unique_id_%</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <p ></p>
+   </body>
+</html>
