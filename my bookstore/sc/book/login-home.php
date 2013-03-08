@@ -72,7 +72,7 @@ ddsmoothmenu.init({
 
 <!--<p><a href='access-controlled.php'>A sample 'members-only' page</a></p>-->
 <br><br><br>
-<p><a href='logout.php'>Logout</a></p>
+<p><a href="http://localhost/my bookstore/sc/book/logout.php">Logout</a></p>
 </div>
 </body>
 </html>

@@ -72,7 +72,7 @@ ddsmoothmenu.init({
     	 <div id="contact_form">
 		 <div class="half right">
 <h2>Not Registerd!</h2>
-<p><a href="http://localhost/my bookstore/sc/book/forms/contact/Contact Us.php">Click Here To Register!</a></font></p>
+<p><a href="http://localhost/my bookstore/sc/book/Contact.php">Click Here To Register!</a></font></p>
 </div>
 		 
 <form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>

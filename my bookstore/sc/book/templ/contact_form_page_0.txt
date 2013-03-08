@@ -103,7 +103,7 @@ ddsmoothmenu.init({
                         
                         <input type="submit" value="submit" id="submit" name="submit" class="submit_btn left" />
 						<input type="reset" value="Reset" id="reset" name="reset" class="submit_btn right" />
-            	</form><div class='sfm_cr_box' style='padding:3px; width:350px'>Powered by Simfatic Forms (<a style='text-decoration:none;' href='http://www.simfatic.com'>HTML form maker</a>), evaluation version.</div><script type='text/javascript'>
+            	</form><script type='text/javascript'>
 // <![CDATA[
 var contactValidator = new Validator("contact");
 contactValidator.addValidation("user_name",{required:true,message:"Please fill in user_name"} );
@@ -134,19 +134,6 @@ contactValidator.addValidation("ph_no",{greaterthan:"0.00",message:"The value of
         </div>   
     </div>
         
-    <div class="half right">
-	<h4>Send us a message now!</h4>
-    	<h4>Mailing Address</h4>
-        <h6><strong>Bookstore</strong></h6>
-          	c-20/1 JSS Academy Of Technical Education<br />Noida,U.P 201301<br />
-				
-		<strong>Phone:</strong> +91-9457104589 <br />
-        <strong>Email:</strong> <a href="mailto:jss@bookstore.com">jss@bookstore.com</a>  <br />
-        <div class="cleaner h40"></div>
-        
-        
-    </div>  
-    <div class="clear h40"></div>
     
 </div> 
 

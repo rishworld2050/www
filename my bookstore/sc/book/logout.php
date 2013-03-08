@@ -62,7 +62,7 @@ ddsmoothmenu.init({
 
 <h2>You have logged out</h2>
 <p>
-<a href='login.php'>Login Again</a>
+<a href="http://localhost/my bookstore/sc/book/login.php">Login Again</a>
 </p>
 </div>
 </body>

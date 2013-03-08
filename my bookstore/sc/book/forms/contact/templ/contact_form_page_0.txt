@@ -103,7 +103,7 @@ ddsmoothmenu.init({
                         <label for="subject">Your Feedback:<font color="red">*</font> :</label> <textarea name="feedback" cols="50" rows="5"></textarea>
                         <input type="submit" value="submit" id="submit" name="submit" class="submit_btn left" />
 						<input type="reset" value="Reset" id="reset" name="reset" class="submit_btn right" />
-            	</form><div class='sfm_cr_box' style='padding:3px; width:350px'>Powered by Simfatic Forms (<a style='text-decoration:none;' href='http://www.simfatic.com'>HTML form builder</a>), evaluation version.</div><script type='text/javascript'>
+            	</form><script type='text/javascript'>
 // <![CDATA[
 var contactValidator = new Validator("contact");
 contactValidator.addValidation("name",{required:true,message:"Please fill in name"} );
