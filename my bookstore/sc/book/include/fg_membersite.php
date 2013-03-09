@@ -520,7 +520,7 @@ class FGMembersite
         
         $mailer->CharSet = 'utf-8';
         
-        $mailer->AddAddress($email,$user_rec['name']);
+        $mailer->AddAddress($email,$user_rec['user_name']);
         
         $mailer->Subject = "Your reset password request at ".$this->sitename;
 
@@ -531,7 +531,7 @@ class FGMembersite
                 urlencode($email).'&code='.
                 urlencode($this->GetResetPasswordCode($email));
 
-        $mailer->Body ="Hello ".$user_rec['name']."\r\n\r\n".
+        $mailer->Body ="Hello ".$user_rec['user_name']."\r\n\r\n".
         "There was a request to reset your password at ".$this->sitename."\r\n".
         "Please click the link below to complete the request: \r\n".$link."\r\n".
         "Regards,\r\n".
@@ -553,16 +553,16 @@ class FGMembersite
         
         $mailer->CharSet = 'utf-8';
         
-        $mailer->AddAddress($email,$user_rec['name']);
+        $mailer->AddAddress($email,$user_rec['user_name']);
         
         $mailer->Subject = "Your new password for ".$this->sitename;
 
         $mailer->From = $this->GetFromAddress();
         
-        $mailer->Body ="Hello ".$user_rec['name']."\r\n\r\n".
+        $mailer->Body ="Hello ".$user_rec['user_name']."\r\n\r\n".
         "Your password is reset successfully. ".
         "Here is your updated login:\r\n".
-        "username:".$user_rec['username']."\r\n".
+        "username:".$user_rec['user_name']."\r\n".
         "password:$new_password\r\n".
         "\r\n".
         "Login here: ".$this->GetAbsoluteURLFolder()."/login.php\r\n".

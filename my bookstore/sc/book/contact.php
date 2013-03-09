@@ -93,7 +93,7 @@ $s_db_handler->AddUniqueFields('user_name','email');
 $formproc_obj->addModule($s_db_handler);
 
 $tupage =  new FM_ThankYouPage();
-$tupage->SetRedirURL('http://localhost/contact/thankyou.html');
+$tupage->SetRedirURL('http://localhost/my bookstore/sc/book/thankyou.html');
 $formproc_obj->addModule($tupage);
 
 $validator->SetDatabase($s_db_handler);

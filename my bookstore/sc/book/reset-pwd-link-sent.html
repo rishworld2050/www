@@ -1,20 +1,8 @@
-<?PHP
-require_once("./include/membersite_config.php");
-
-if(isset($_POST['submitted']))
-{
-   if($fgmembersite->Login())
-   {
-        $fgmembersite->RedirectToURL("login-home.php");
-   }
-}
-
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Login</title>
+<title>Reset Password Link Sent</title>
 <meta name="keywords" content="bookstore" />
 <meta name="description" content="Bookstore" />
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -65,70 +53,9 @@ ddsmoothmenu.init({
         <div class="clear"></div>       
     </div> 
 </div> 
-
-<!-- Form Code Start -->
 <div id="templatemo_main">
-
-    	 <div id="contact_form">
-		 <div class="half right">
-<h2>Not Registerd!</h2>
-<p><a href="http://localhost/my bookstore/sc/book/Contact.php">Click Here To Register!</a></font></p>
+<h2>Reset password link sent</h2>
+An email is sent to your email address that contains the link to reset the password.
 </div>
-		 
-<form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
-
-<h1>Login:</h1>
-
-<input type='hidden' name='submitted' id='submitted' value='1'/>
-
-<div class='short_explanation'><font color="red">* required fields</font></div>
-<div class="cleaner h10"></div>
-<div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
-<div class="cleaner h10"></div>
-<div class='container'>
-    <label for="username" >UserName<font color="red">*</font>&nbsp;:</label>
-    <input type="text" id="username" name="username" class="required input_field" />
-    <span id="login_username_errorloc" class="error"</span>
-	<div class="cleaner h10"></div>
-    <label for="password">Password<font color="red">*</font>&nbsp;:</label>
-    <input type="password" name="password" id="password" class="required input_field" /><br/>
-    <span id='login_password_errorloc' class='error'></span>
-</div>
-
-<div class='container'>
-   <input type="submit" value="submit" id="submit" name="submit" class="submit_btn left" />
-  
-</div>
-
-
-</form>
-<!-- client-side Form Validations:
-Uses the excellent form validation script from JavaScript-coder.com-->
-
-<script type='text/javascript'>
-// <![CDATA[
-
-    var frmvalidator  = new Validator("login");
-    frmvalidator.EnableOnPageErrorDisplay();
-    frmvalidator.EnableMsgsTogether();
-
-   frmvalidator.addValidation("username","req","");
-    
-    frmvalidator.addValidation("password","req","");
-
-// ]]>
-</script>
-</div>
-<div class="cleaner h10"></div>
-<div class="cleaner h10"></div>
-<div class="cleaner h10"></div>
-<div class="cleaner h10"></div>
-<div class="cleaner h10"></div>
-<p align="left"><a href="http://localhost/my bookstore/sc/book/reset-pwd-req.php">Forgot Password?</a></p>
-</div>
-<!--
-Form Code End (see html-form-guide.com for more info.)
--->
-
 </body>
 </html>

@@ -1,11 +1,13 @@
 <?PHP
 require_once("./include/membersite_config.php");
 
+$emailsent = false;
 if(isset($_POST['submitted']))
 {
-   if($fgmembersite->Login())
+   if($fgmembersite->EmailResetPasswordLink())
    {
-        $fgmembersite->RedirectToURL("login-home.php");
+        $fgmembersite->RedirectToURL("reset-pwd-link-sent.html");
+        exit;
    }
 }
 
@@ -14,7 +16,7 @@ if(isset($_POST['submitted']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Login</title>
+<title>Reset Password</title>
 <meta name="keywords" content="bookstore" />
 <meta name="description" content="Bookstore" />
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -65,42 +67,28 @@ ddsmoothmenu.init({
         <div class="clear"></div>       
     </div> 
 </div> 
-
 <!-- Form Code Start -->
-<div id="templatemo_main">
-
-    	 <div id="contact_form">
-		 <div class="half right">
-<h2>Not Registerd!</h2>
-<p><a href="http://localhost/my bookstore/sc/book/Contact.php">Click Here To Register!</a></font></p>
-</div>
-		 
-<form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
-
-<h1>Login:</h1>
+<div id='templatemo_main'>
+<div id="contact_form">
+<form id='resetreq' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
+<h2>Reset Password</h2>
 
 <input type='hidden' name='submitted' id='submitted' value='1'/>
 
 <div class='short_explanation'><font color="red">* required fields</font></div>
-<div class="cleaner h10"></div>
+
 <div><span class='error'><?php echo $fgmembersite->GetErrorMessage(); ?></span></div>
-<div class="cleaner h10"></div>
 <div class='container'>
-    <label for="username" >UserName<font color="red">*</font>&nbsp;:</label>
-    <input type="text" id="username" name="username" class="required input_field" />
-    <span id="login_username_errorloc" class="error"</span>
+   <label for="email">Email <font color="red">*</font>:</label> <input type="text" id="email" name="email" class="validate-email required input_field" />
+                        <div class="cleaner h10"></div>
+    <span id="login_username_errorloc" class="error"></span>
 	<div class="cleaner h10"></div>
-    <label for="password">Password<font color="red">*</font>&nbsp;:</label>
-    <input type="password" name="password" id="password" class="required input_field" /><br/>
-    <span id='login_password_errorloc' class='error'></span>
 </div>
-
+<div class='short_explanation'>A link to reset your password will be sent to the email address</div>
 <div class='container'>
-   <input type="submit" value="submit" id="submit" name="submit" class="submit_btn left" />
-  
-</div>
+    <input type="submit" value="submit" id="submit" name="submit" class="submit_btn left" />
 
-
+</fieldset>
 </form>
 <!-- client-side Form Validations:
 Uses the excellent form validation script from JavaScript-coder.com-->
@@ -108,23 +96,16 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 <script type='text/javascript'>
 // <![CDATA[
 
-    var frmvalidator  = new Validator("login");
+    var frmvalidator  = new Validator("resetreq");
     frmvalidator.EnableOnPageErrorDisplay();
     frmvalidator.EnableMsgsTogether();
 
-   frmvalidator.addValidation("username","req","");
-    
-    frmvalidator.addValidation("password","req","");
+   // frmvalidator.addValidation("email","req","Please provide the email address used to sign-up");
+    //frmvalidator.addValidation("email","email","Please provide the email address used to sign-up");
 
 // ]]>
 </script>
-</div>
-<div class="cleaner h10"></div>
-<div class="cleaner h10"></div>
-<div class="cleaner h10"></div>
-<div class="cleaner h10"></div>
-<div class="cleaner h10"></div>
-<p align="left"><a href="http://localhost/my bookstore/sc/book/reset-pwd-req.php">Forgot Password?</a></p>
+
 </div>
 <!--
 Form Code End (see html-form-guide.com for more info.)

@@ -149,32 +149,7 @@
 <p>{$product_info[2]}
 </td>
 
-<td width=1% valign=top align=right>
 
-<center>
-<form action="index.php" method=get>
-
-<table border=0 cellspacing=1 cellpadding=2 bgcolor=#{$smarty.const.CONF_MIDDLE_COLOR}>
- <tr><td align="center" class="menu">{$smarty.const.VOTING_FOR_ITEM_TITLE}</td></tr>
- <tr bgcolor="white"><td>
- <input type="radio" name="mark" value="5" checked>{$smarty.const.MARK_EXCELLENT}<br>
- <input type="radio" name="mark" value="3.8">{$smarty.const.MARK_GOOD}<br>
- <input type="radio" name="mark" value="2.5">{$smarty.const.MARK_AVERAGE}<br>
- <input type="radio" name="mark" value="1">{$smarty.const.MARK_POOR}<br>
- <input type="radio" name="mark" value="0.1">{$smarty.const.MARK_PUNY}
- </td></tr>
-</table><br>
-
-<input type="hidden" name="productID" value="{$product_info[11]}">
-<input type="hidden" name="vote" value="yes">
-<input type="submit" class="redbutton" value="{$smarty.const.VOTE_BUTTON}">
-
-</form>
-</center>
-
-		</table>
-
-	</td>
 </tr>
 </table>
 

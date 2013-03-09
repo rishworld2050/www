@@ -70,7 +70,7 @@ $data_email_sender->AddToAddr('Administrator<admin@bookstore.com>');
 $formproc_obj->addModule($data_email_sender);
 
 $tupage =  new FM_ThankYouPage();
-$tupage->SetRedirURL('http://localhost/contact/thankyouf.html');
+$tupage->SetRedirURL('http://localhost/my bookstore/sc/book/thankyouf.html');
 $formproc_obj->addModule($tupage);
 
 $page_renderer->SetFormValidator($validator);

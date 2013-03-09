@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.0, created on 2013-03-07 09:21:50
+<?php /* Smarty version 2.6.0, created on 2013-03-09 06:13:26
          compiled from product_detailed.tpl.html */ ?>
 <?php require_once(SMARTY_DIR . 'core' . DIRECTORY_SEPARATOR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'replace', 'product_detailed.tpl.html', 10, false),)), $this); ?>
@@ -230,41 +230,7 @@ $this->_sections['i']['last']       = ($this->_sections['i']['iteration'] == $th
 
 </td>
 
-<td width=1% valign=top align=right>
 
-<center>
-<form action="index.php" method=get>
-
-<table border=0 cellspacing=1 cellpadding=2 bgcolor=#<?php echo @constant('CONF_MIDDLE_COLOR'); ?>
->
- <tr><td align="center" class="menu"><?php echo @constant('VOTING_FOR_ITEM_TITLE'); ?>
-</td></tr>
- <tr bgcolor="white"><td>
- <input type="radio" name="mark" value="5" checked><?php echo @constant('MARK_EXCELLENT'); ?>
-<br>
- <input type="radio" name="mark" value="3.8"><?php echo @constant('MARK_GOOD'); ?>
-<br>
- <input type="radio" name="mark" value="2.5"><?php echo @constant('MARK_AVERAGE'); ?>
-<br>
- <input type="radio" name="mark" value="1"><?php echo @constant('MARK_POOR'); ?>
-<br>
- <input type="radio" name="mark" value="0.1"><?php echo @constant('MARK_PUNY'); ?>
-
- </td></tr>
-</table><br>
-
-<input type="hidden" name="productID" value="<?php echo $this->_tpl_vars['product_info'][11]; ?>
-">
-<input type="hidden" name="vote" value="yes">
-<input type="submit" class="redbutton" value="<?php echo @constant('VOTE_BUTTON'); ?>
-">
-
-</form>
-</center>
-
-		</table>
-
-	</td>
 </tr>
 </table>
 
