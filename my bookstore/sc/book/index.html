@@ -61,11 +61,20 @@ ddsmoothmenu.init({
 	<div id="templatemo_header">
     	<div id="site_title"><a href="#">Book Store</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
-             <ul>
+            <ul>
 			<li><a href="http://localhost/my bookstore/sc/book/index.html" class="selected"><b><u>Home</u></b></a></li>
                 
                 <li><a href="http://localhost/my bookstore/sc/book/portfolio.html"><b><u>Gallery</u></b></a>
-                    
+                    <ul>
+                    	<li><span class="top"></span><span class="bottom"></span></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/fiction.html">Fiction</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/horror.html">Horror</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/edu.html">Educational</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/romantic.html">Romantic</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/comedy.html">Comedy</a></li>
+						<li><a href="http://localhost/my bookstore/sc/book/politics.html">Politics</a></li>
+						<li><a href="http://localhost/my bookstore/sc/book/sci-fi.html">Sci-Fi</a></li>
+                  	</ul>
                 </li>
                 <li><a href="http://localhost/my bookstore/sc/book/blog_post.html"><b><u>Discussion</u></b></a></li>
                 <li><a href="http://localhost/my bookstore/sc/book/forms/contact/Contact Us.php"><b><u>Contact Us</u></b></a></li>
@@ -189,12 +198,21 @@ Author: Jamie McGuire</p>
 
 </br>
 </br>
-</br><p><em>Search For The Required Book</em></p>
 </br>
-          <form action="#" method="get">
-        <h1><input id="searchBox" style="width:300px" name="q" autocomplete="off" type="text" /></h1>
-        <h1 style="font-size: 1.3em;"><em><div class="buttons"><input type="submit"  value="Search" id="searchButton" style="float:none;"></em></div></h1>
-      <div style="display: none;"></div></form>
+<div id="DivTagCloudFX"></div>
+<script type="text/javascript" src="swfobject.js"></script>
+	<script type="text/javascript">
+		var flashvars = {};
+		var params = {};
+		params.base = "";
+		params.scale = "noscale";
+		params.salign = "tl";
+		params.wmode = "transparent";
+		params.allowFullScreen = "true";
+		params.allowScriptAccess = "always";
+		swfobject.embedSWF("TagCloudFX.swf", "DivTagCloudFX", "600", "300", "9.0.0", false, flashvars, params);
+	</script>
+	
     		</div>  
         <div class="clear h40"></div>
         <div class="col one_third">

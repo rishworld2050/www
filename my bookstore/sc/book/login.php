@@ -20,6 +20,7 @@ if(isset($_POST['submitted']))
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
 
+
       <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
@@ -53,7 +54,16 @@ ddsmoothmenu.init({
 			<li><a href="http://localhost/my bookstore/sc/book/index.html" class="selected"><b><u>Home</u></b></a></li>
                 
                 <li><a href="http://localhost/my bookstore/sc/book/portfolio.html"><b><u>Gallery</u></b></a>
-                    
+                    <ul>
+                    	<li><span class="top"></span><span class="bottom"></span></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/fiction.html">Fiction</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/horror.html">Horror</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/edu.html">Educational</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/romantic.html">Romantic</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/comedy.html">Comedy</a></li>
+						<li><a href="http://localhost/my bookstore/sc/book/politics.html">Politics</a></li>
+						<li><a href="http://localhost/my bookstore/sc/book/sci-fi.html">Sci-Fi</a></li>
+                  	</ul>
                 </li>
                 <li><a href="http://localhost/my bookstore/sc/book/blog_post.html"><b><u>Discussion</u></b></a></li>
                 <li><a href="http://localhost/my bookstore/sc/book/forms/contact/Contact Us.php"><b><u>Contact Us</u></b></a></li>
@@ -93,6 +103,7 @@ ddsmoothmenu.init({
     <label for="password">Password<font color="red">*</font>&nbsp;:</label>
     <input type="password" name="password" id="password" class="required input_field" /><br/>
     <span id='login_password_errorloc' class='error'></span>
+	
 </div>
 
 <div class='container'>

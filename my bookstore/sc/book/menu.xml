@@ -1,0 +1,26 @@
+﻿<items>
+	<item link="http://www.google.com/" target="_blank" foto="assets/demo1/blip.swf">
+		<![CDATA[<h>Fiction</h>]]> 
+	</item>
+	<item link="http://www.google.com/" target="_blank">
+		<![CDATA[ <l>Horror</l>]]> 
+	</item>
+	
+	<item link="http://www.google.com/" foto="assets/demo1/blip2.swf">
+		<![CDATA[ <h>Comedy</h>]]> 
+	</item>
+	<item link="http://www.google.com/" target="_blank" foto="assets/demo1/blip3.swf">
+		<![CDATA[ <h>Romance</h>]]> 
+	</item>
+	<item link="http://www.google.com/" target="_blank" foto="assets/demo1/blip4.swf">
+		<![CDATA[ <h>Sci-Fi</h>]]> 
+	</item>
+	<item link="http://www.google.com/" target="_blank">
+		<![CDATA[ <m>Politics/m>]]> 
+	</item>
+	<item link="http://www.google.com/" target="_blank">
+		<![CDATA[ <l>Education</l>]]> 
+	</item>
+	
+		
+</items>

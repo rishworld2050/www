@@ -42,11 +42,20 @@ ddsmoothmenu.init({
 	<div id="templatemo_header">
     	<div id="site_title"><a href="#">Bookstore</a></div>
         <div id="templatemo_menu" class="ddsmoothmenu">
-             <ul>
+            <ul>
 			<li><a href="http://localhost/my bookstore/sc/book/index.html" class="selected"><b><u>Home</u></b></a></li>
                 
                 <li><a href="http://localhost/my bookstore/sc/book/portfolio.html"><b><u>Gallery</u></b></a>
-                    
+                    <ul>
+                    	<li><span class="top"></span><span class="bottom"></span></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/fiction.html">Fiction</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/horror.html">Horror</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/edu.html">Educational</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/romantic.html">Romantic</a></li>
+                        <li><a href="http://localhost/my bookstore/sc/book/comedy.html">Comedy</a></li>
+						<li><a href="http://localhost/my bookstore/sc/book/politics.html">Politics</a></li>
+						<li><a href="http://localhost/my bookstore/sc/book/sci-fi.html">Sci-Fi</a></li>
+                  	</ul>
                 </li>
                 <li><a href="http://localhost/my bookstore/sc/book/blog_post.html"><b><u>Discussion</u></b></a></li>
                 <li><a href="http://localhost/my bookstore/sc/book/forms/contact/Contact Us.php"><b><u>Contact Us</u></b></a></li>

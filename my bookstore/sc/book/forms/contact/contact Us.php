@@ -58,10 +58,10 @@ $validator->addValidation("email","required","Please fill in email");
 $validator->addValidation("email","email","The input for email should be a valid email value");
 $validator->addValidation("address","required","Please fill in address");
 $validator->addValidation("address","alnum_s","The input for address should be a valid alpha-numeric value");
-$validator->addValidation("ph_no","numeric","The input for ph_no should be a valid numeric value");
-$validator->addValidation("ph_no","maxlen=11","The length of the input for ph_no should not exceed 11");
-$validator->addValidation("ph_no","minlen=10","The length of the input for ph_no should be at least 10.");
-$validator->addValidation("ph_no","greaterthan=0.00","The value of ph_no should be greater than 0.00");
+$validator->addValidation("ph_no","numeric","The input for Mobile should be a valid numeric value");
+$validator->addValidation("ph_no","maxlen=11","The length of the input for Mobile should not exceed 11");
+$validator->addValidation("ph_no","minlen=10","The length of the input for Mobile should be at least 10.");
+$validator->addValidation("ph_no","greaterthan=0.00","The value of Mobile should be greater than 0.00");
 $validator->addValidation("feedback","required","Please fill in feedback");
 $formproc_obj->addModule($validator);
 

@@ -38,8 +38,7 @@ display: inline-block;
 }
 
 .ddsmoothmenu ul li a.selected, .ddsmoothmenu ul li a:hover { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
-	
-	color: #333
+		color: #333
 }
 
 /*1st sub level menu*/
